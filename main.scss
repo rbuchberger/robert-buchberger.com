@@ -13,11 +13,7 @@
     // --foreground-color: #FAFAFA; 
 }
 
-// Basic Fonts
-
-html {
-    box-sizing: border-box;
-}
+// Basic Typography
 
 body {
     font-family: 'Nunito', sans-serif;
@@ -30,30 +26,32 @@ body {
 h1, h2, h3, h4 {
     line-height: 1.5;
     margin-top: 4rem;
+    margin-bottom: 1.2rem;
+    font-weight: 200;
+    text-shadow: 2px 2px 4px #0002;
 }
 
 h1 {
     font-size: 5rem;
     text-align: center;
-    font-weight: 200;
     margin-bottom: 3rem;
 }
 
 h2 {
     font-size: 3rem;
-    font-weight: 200;
     border-bottom: 1px solid var(--accent-color);
     // margin-bottom: 2rem;
 }
 
 h3 { 
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-bottom: 1px solid var(--accent-color);
+    font-weight: 200;
     // margin-bottom: 2rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     border-bottom: 1px solid var(--accent-color);
     // margin-bottom: 1.5rem;
 }
@@ -64,12 +62,20 @@ p {
 
 a {
     color: var(--accent-color);
-    :hover {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    &:hover {
         color: var(--accent-hover-color);
+        text-decoration: underline;
     }
 }
 
 // Basic Layout
+
+html {
+    box-sizing: border-box;
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
