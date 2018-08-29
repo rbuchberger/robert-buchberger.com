@@ -80,3 +80,23 @@ main {
     max-width: 800px;
     margin: 0 auto;
 }
+
+// navbar
+
+nav {
+    border-top: solid 3px var(--accent-color);
+    padding: 0 3rem;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    li {
+        margin: .5rem 1rem;
+    }
+
+    li#home {
+        margin-right: auto;
+    }
+}
