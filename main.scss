@@ -1,3 +1,76 @@
 ---
 ---
 @import 'reset';
+
+:root {
+    --accent-color: #27A822;
+    --accent-hover-color: #267723;
+    // Light 
+    --background-color: #FAFAFA;
+    --foreground-color: #464646;
+    // Dark
+    // --background-color: #464646;
+    // --foreground-color: #FAFAFA; 
+}
+
+// Basic Fonts
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.5;
+    margin-top: 4rem;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    border-bottom: 1px solid var(--accent-color);
+    // margin-bottom: 2rem;
+}
+
+h3 { 
+    font-size: 2rem;
+    border-bottom: 1px solid var(--accent-color);
+    // margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--accent-color);
+    // margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--accent-color);
+    :hover {
+        color: var(--accent-hover-color);
+    }
+}
+
+// Basic Layout
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
