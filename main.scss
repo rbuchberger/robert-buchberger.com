@@ -66,7 +66,6 @@ a {
     transition-duration: 0.4s;
     &:hover {
         color: var(--accent-hover-color);
-        text-decoration: underline;
     }
 }
 
@@ -93,10 +92,26 @@ nav ul {
     justify-content: end;
     
     li {
-        margin: .5rem 1rem;
+        a {
+            color: var(--foreground-color);
+            display: block;
+            padding: 0 1.5rem;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
     }
 
-    li#home {
+    // Move first item (homepage link) to the left
+    li:first-child {
         margin-right: auto;
+    }
+
+    li.active {
+        a {
+            color: var(--background-color);
+            box-shadow: 4px 3px 7px #0002;
+        }
+        background-color: var(--accent-color);
     }
 }

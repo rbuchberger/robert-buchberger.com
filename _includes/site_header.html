@@ -1,8 +1,8 @@
 <nav>
     <ul>
-        <li id="home"><a href="#">Home</a></li>
-        <li><a href="blog.html"></a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li {% if page.url == "/" %}class="active"{% endif %}><a href="/">Home</a></li>
+        <li {% if page.url contains "blog" %}class="active"{% endif %}><a href="/blog/">Blog</a></li>
+        <li {% if page.url contains "projects" %}class="active"{% endif %}><a href="/projects/">Projects</a></li>
+        <li {% if page.url contains "resume" %}class="active"{% endif %}><a href="/resume/">Resume</a></li>
     </ul>
 </nav>
