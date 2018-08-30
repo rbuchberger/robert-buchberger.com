@@ -70,6 +70,14 @@ a {
     }
 }
 
+ul {
+    margin-left: 2rem;
+    list-style-type: "-";
+    li {
+        padding-left: .5rem;
+    }
+}
+
 // Basic Layout
 
 html {
@@ -103,8 +111,10 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    
+    list-style: none; 
+    padding: 0;
     li {
+        padding: 0;
         a {
             color: var(--foreground-color);
             display: block;
