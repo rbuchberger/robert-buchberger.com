@@ -58,7 +58,7 @@ h4 {
 }
 
 p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 a {
@@ -78,6 +78,48 @@ ul {
     }
 }
 
+dl {
+    display: grid;
+    grid-template-columns: [term] 1fr [description] 2fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    vertical-align: center;
+
+    dt {
+        grid-column: term;
+        font-weight: bold;
+        text-align: right;
+        text-shadow: 3px 3px 3px rgba(0,0,0,.10);
+
+        img.icon {
+            height: 2em;
+            margin-top: 1em;
+            // display: block;
+            // margin: 0 auto;
+        }
+
+        a {
+            display: block;
+        }
+
+    }
+
+    dd {
+        grid-column: description;
+    }
+}
+
+// Special items
+
+p.muted {
+    font-size: 1rem;
+    color: var(--light-text-color);
+
+}
+
+img.icon {
+    height: 1em;
+}
 // Basic Layout
 
 html {
@@ -142,31 +184,11 @@ nav ul {
     }
 }
 
-dl {
-    display: grid;
-    grid-template-columns: [term] 1fr [description] 2fr;
-    column-gap: 2rem;
-    row-gap: 3rem;
-
-    dt {
-        grid-column: term;
-        font-weight: bold;
-        text-align: right;
-        text-shadow: 3px 3px 7px rgba(0,0,0,.15);
-    }
-
-    dd {
-        grid-column: description;
-    }
-}
-
 // footer
 
 footer {
     flex-grow: 0;
-    font-size: 1rem;
     text-align: center;
-    color: var(--light-text-color);
     border-bottom: 3px solid var(--accent-color);
     margin-top: 4rem;
     p {
