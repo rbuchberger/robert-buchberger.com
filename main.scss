@@ -142,6 +142,27 @@ nav ul {
     }
 }
 
+dl {
+    display: grid;
+    grid-template-columns: [definition] 1fr [description] 2fr;
+    column-gap: 2rem;
+    row-gap: 4rem;
+
+    dd, dt {
+        // padding: 2rem 1rem;
+    }
+
+    dt {
+        grid-column: definition;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    dd {
+        grid-column: description;
+    }
+}
+
 // footer
 
 footer {
@@ -159,8 +180,9 @@ footer {
 #portrait {
     display: block;
     max-width: 80%;
-    width: 600px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     padding: 0;
-    margin: 5rem auto;
+    margin: 8rem auto;
 }
