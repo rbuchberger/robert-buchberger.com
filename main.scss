@@ -26,8 +26,8 @@ body {
 
 h1, h2, h3, h4 {
     line-height: 1.5;
-    margin-top: 4rem;
-    margin-bottom: 1.2rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
     font-weight: 200;
     text-shadow: 2px 2px 4px #0002;
 }
@@ -87,6 +87,12 @@ dl {
 
     dt {
         grid-column: term;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        border-right: 1px solid var(--accent-color);
+        padding-right: 2rem;
         font-weight: bold;
         text-align: right;
         text-shadow: 3px 3px 3px rgba(0,0,0,.10);
@@ -94,12 +100,6 @@ dl {
         img.icon {
             height: 2em;
             margin-top: 1em;
-            // display: block;
-            // margin: 0 auto;
-        }
-
-        a {
-            display: block;
         }
 
     }
@@ -120,6 +120,7 @@ p.muted {
 img.icon {
     height: 1em;
 }
+
 // Basic Layout
 
 html {
@@ -139,7 +140,7 @@ body {
 }
 
 main {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
     flex: 1 0 auto;
