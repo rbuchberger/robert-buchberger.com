@@ -97,9 +97,19 @@ dl {
         text-align: right;
         text-shadow: 3px 3px 3px rgba(0,0,0,.10);
 
-        img.icon {
+        svg.icon {
             height: 2em;
             margin-top: 1em;
+
+            path {
+                fill: var(--foreground-color);
+                transition-duration: .9s;
+            }
+
+            &:hover path {
+                transition-duration: .2s;
+                fill: var(--accent-color);
+            }
         }
 
     }
