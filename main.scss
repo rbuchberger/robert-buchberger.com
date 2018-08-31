@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2;
     background-color: var(--background-color);
     color: var(--foreground-color);
@@ -144,18 +144,15 @@ nav ul {
 
 dl {
     display: grid;
-    grid-template-columns: [definition] 1fr [description] 2fr;
+    grid-template-columns: [term] 1fr [description] 2fr;
     column-gap: 2rem;
-    row-gap: 4rem;
-
-    dd, dt {
-        // padding: 2rem 1rem;
-    }
+    row-gap: 3rem;
 
     dt {
-        grid-column: definition;
+        grid-column: term;
         font-weight: bold;
         text-align: right;
+        text-shadow: 3px 3px 7px rgba(0,0,0,.15);
     }
 
     dd {
@@ -171,6 +168,7 @@ footer {
     text-align: center;
     color: var(--light-text-color);
     border-bottom: 3px solid var(--accent-color);
+    margin-top: 4rem;
     p {
         margin-bottom: 0;
     }
