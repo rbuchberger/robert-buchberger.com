@@ -1,0 +1,19 @@
+.icon {
+    height: 1em;
+
+    &.icon-big {
+        margin-top: 1em;
+        height: 2em;
+    }
+
+    path {
+        fill: var(--foreground-color);
+        transition-duration: .9s;
+    }
+
+    &:hover path {
+        transition-duration: .2s;
+        fill: var(--accent-color);
+    }
+
+}

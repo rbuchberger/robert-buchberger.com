@@ -1,0 +1,24 @@
+// Basic site-wide Layout
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1 0 auto;
+}

@@ -1,0 +1,25 @@
+dl.project-showcase {
+    display: grid;
+    grid-template-columns: [term] 1fr [description] 2fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    vertical-align: center;
+
+    dt {
+        grid-column: term;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        border-right: 1px solid var(--accent-color);
+        padding-right: 2rem;
+        font-weight: bold;
+        text-align: right;
+        text-shadow: 3px 3px 3px rgba(0,0,0,.10);
+    }
+
+    dd {
+        grid-column: description;
+    }
+}
+

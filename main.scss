@@ -1,6 +1,9 @@
 ---
 ---
 @import 'reset';
+@import 'layout';
+@import 'project_showcase';
+@import 'icons';
 
 :root {
     --accent-color: #27A822;
@@ -10,8 +13,6 @@
     --foreground-color: #464646;
     --light-text-color: #888;
     // Dark
-    // --background-color: #464646;
-    // --foreground-color: #FAFAFA; 
 }
 
 // Basic Typography
@@ -40,21 +41,15 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    border-bottom: 1px solid var(--accent-color);
-    // margin-bottom: 2rem;
 }
 
 h3 { 
     font-size: 2.5rem;
-    border-bottom: 1px solid var(--accent-color);
     font-weight: 200;
-    // margin-bottom: 2rem;
 }
 
 h4 {
     font-size: 1.8rem;
-    border-bottom: 1px solid var(--accent-color);
-    // margin-bottom: 1.5rem;
 }
 
 p {
@@ -78,82 +73,12 @@ ul {
     }
 }
 
-dl {
-    display: grid;
-    grid-template-columns: [term] 1fr [description] 2fr;
-    column-gap: 2rem;
-    row-gap: 3rem;
-    vertical-align: center;
-
-    dt {
-        grid-column: term;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        border-right: 1px solid var(--accent-color);
-        padding-right: 2rem;
-        font-weight: bold;
-        text-align: right;
-        text-shadow: 3px 3px 3px rgba(0,0,0,.10);
-
-        svg.icon {
-            height: 2em;
-            margin-top: 1em;
-
-            path {
-                fill: var(--foreground-color);
-                transition-duration: .9s;
-            }
-
-            &:hover path {
-                transition-duration: .2s;
-                fill: var(--accent-color);
-            }
-        }
-
-    }
-
-    dd {
-        grid-column: description;
-    }
-}
-
 // Special items
 
 p.muted {
     font-size: 1rem;
     color: var(--light-text-color);
 
-}
-
-img.icon {
-    height: 1em;
-}
-
-// Basic Layout
-
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-body {
-    height: 100vh;
-    max-width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    flex: 1 0 auto;
 }
 
 // navbar
@@ -205,6 +130,10 @@ footer {
     p {
         margin-bottom: 0;
     }
+}
+
+.keyline-bottom {
+    border-bottom: 1px solid var(--accent-color);
 }
 
 // Index Page
