@@ -54,6 +54,12 @@ ul {
     li {
         padding-left: .5rem;
     }
+
+    &.sidebar li {
+        list-style-type: none;
+        border-left: 1px solid var(--accent-color);
+        margin-bottom: 1rem;
+    }
 }
 
 .subtitle {
