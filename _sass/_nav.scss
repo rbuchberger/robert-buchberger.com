@@ -1,0 +1,43 @@
+// navbar
+
+nav.main {
+    border-top: solid 3px var(--accent-color);
+    padding: 0 3rem;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        list-style: none; 
+        padding: 0;
+    }
+
+    li {
+        padding: 0;
+
+        // Move first item (homepage link) to the left
+        &:first-child {
+            margin-right: auto;
+        }
+
+    }
+
+    li.active {
+        a {
+            color: var(--background-color);
+            box-shadow: 4px 3px 7px #0002;
+        }
+        background-color: var(--accent-color);
+    }
+
+    a {
+        color: var(--foreground-color);
+        display: block;
+        padding: 0 1.5rem;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+}

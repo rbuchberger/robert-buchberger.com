@@ -1,135 +1,28 @@
 ---
 ---
 @import 'reset';
-@import 'layout';
-@import 'project_showcase';
-@import 'icons';
 
+@import 'footer';
+@import 'icons';
+@import 'layout';
+@import 'nav';
+@import 'project_showcase';
+@import 'typography';
+
+// Site-wide color palette:
 :root {
     --accent-color: #27A822;
     --accent-hover-color: #267723;
-    // Light 
     --background-color: #FAFAFA;
     --foreground-color: #464646;
     --light-text-color: #888;
-    // Dark
-}
-
-// Basic Typography
-
-body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    line-height: 2;
-    background-color: var(--background-color);
-    color: var(--foreground-color);
-}
-
-h1, h2, h3, h4 {
-    line-height: 1.5;
-    margin-top: 6rem;
-    margin-bottom: 2rem;
-    font-weight: 200;
-    text-shadow: 2px 2px 4px #0002;
-}
-
-h1 {
-    font-size: 5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-h2 {
-    font-size: 3rem;
-}
-
-h3 { 
-    font-size: 2.5rem;
-    font-weight: 200;
-}
-
-h4 {
-    font-size: 1.8rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition-duration: 0.4s;
-    &:hover {
-        color: var(--accent-hover-color);
-    }
-}
-
-ul {
-    margin-left: 2rem;
-    list-style-type: "-";
-    li {
-        padding-left: .5rem;
-    }
 }
 
 // Special items
-
 p.muted {
     font-size: 1rem;
     color: var(--light-text-color);
 
-}
-
-// navbar
-
-nav {
-    border-top: solid 3px var(--accent-color);
-    padding: 0 3rem;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    list-style: none; 
-    padding: 0;
-    li {
-        padding: 0;
-        a {
-            color: var(--foreground-color);
-            display: block;
-            padding: 0 1.5rem;
-            &:hover {
-                color: var(--accent-color);
-            }
-        }
-    }
-
-    // Move first item (homepage link) to the left
-    li:first-child {
-        margin-right: auto;
-    }
-
-    li.active {
-        a {
-            color: var(--background-color);
-            box-shadow: 4px 3px 7px #0002;
-        }
-        background-color: var(--accent-color);
-    }
-}
-
-// footer
-
-footer {
-    flex-grow: 0;
-    text-align: center;
-    border-bottom: 3px solid var(--accent-color);
-    margin-top: 4rem;
-    p {
-        margin-bottom: 0;
-    }
 }
 
 .keyline-bottom {
