@@ -23,3 +23,16 @@ dl.project-showcase {
     }
 }
 
+dl.stacked {
+
+    margin-bottom: 3rem;
+
+    dd {
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--accent-color);
+    }
+
+}
+
