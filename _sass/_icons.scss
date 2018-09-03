@@ -6,14 +6,27 @@
         height: 2em;
     }
 
-    path {
+    &.icon-color path {
         fill: var(--foreground-color);
         transition-duration: .9s;
     }
 
-    &:hover path {
-        transition-duration: .2s;
-        fill: var(--accent-color);
-    }
 
+}
+
+a:hover .icon-color path {
+    transition-duration: .2s;
+    fill: var(--accent-color);
+}
+
+// People don't want me altering their logos, so the hover states are background-color changes
+.icon-logo {
+    border-radius: 50%;
+    background-color: var(--background-color);
+    transition-duration: .9s;
+}
+
+a:hover .icon-logo {
+    background-color: var(--accent-color);
+    transition-duration: .2s;
 }
