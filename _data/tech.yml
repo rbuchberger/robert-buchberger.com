@@ -58,3 +58,11 @@ qa:
 ruby: 
   icon: ruby-logo.svg
   name: Ruby
+
+linux:
+  icon: tux.svg
+  name: Linux
+
+polish: 
+  icon: poland.svg
+  name: Some Polish
