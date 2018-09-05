@@ -2,4 +2,59 @@ aws:
   icon: aws-logo.svg
   name: Amazon Web Services
 
-  
+rails:
+  icon: ruby-logo.svg
+  icon2: rails-logo.svg
+  name: Ruby on Rails
+
+bootstrap: 
+  icon: bootstrap-logo-2.svg
+  name: Bootstrap
+
+heroku:
+  icon: heroku-logo.svg
+  name: Heroku
+
+jekyll:
+  icon: jekyll-logo.svg
+  name: Jekyll
+
+html:
+  icon: html-logo.svg
+  name: HTML
+
+css:
+  icon: css-logo.svg
+  name: CSS
+
+javascript:
+  icon: javascript-logo.svg
+  name: Javascript
+
+git:
+  icon: git-logo.svg
+  name: Git
+
+sql:
+  icon: sql-logo.svg
+  name: SQL
+
+fundamentals:
+  icon: generic-code-logo2.svg
+  name: Fundamentals
+
+oop:
+  icon: generic-oop-icon.svg
+  name: Object Oriented Design
+
+databases:
+  icon: sql-logo.svg
+  name: Databases
+
+qa:
+  icon: generic-code-logo.svg
+  name: Quality Assurance
+
+ruby: 
+  icon: ruby-logo.svg
+  name: Ruby

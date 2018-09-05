@@ -22,32 +22,10 @@
         </dt>
         <dd>
             <ul class="tech-list">
-
-                {% 
-                    include tech_list_item.html
-                    icon="ruby-logo"
-                    icon2="rails-logo"
-                    tech="Ruby on Rails"
-                %}
-
-                {% 
-                    include tech_list_item.html
-                    icon="bootstrap-logo-2"
-                    tech="Bootstrap"
-                %}
-
-                {% 
-                    include tech_list_item.html
-                    icon="heroku-logo"
-                    tech="Heroku"
-                %}
-
-                {% 
-                    include tech_list_item.html
-                    icon="aws-logo"
-                    tech="Amazon Web Services"
-                %}
-
+                {% include tech_list_item.html tech="rails" %}
+                {% include tech_list_item.html tech="bootstrap" %}
+                {% include tech_list_item.html tech="heroku" %}
+                {% include tech_list_item.html tech="aws" %}
             </ul>
             <p class="muted">
                 This Rails application provides training, bulletin, document library, and volunteer time tracking features to a small component of a county sheriff's office. It followed in the footsteps of the upskill tutorial, using many of the same frameworks and services.
@@ -63,14 +41,8 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/jekyll-logo.svg class="icon" overflow="visible" %}
-                    Jekyll + Massively
-                </li>
-                <li>
-                    {% svg /images/aws-logo.svg class="icon" overflow="visible" %}
-                    Amazon Web Services
-                </li>
+                {% include tech_list_item.html tech="jekyll" %}
+                {% include tech_list_item.html tech="aws" %}
             </ul>
             <p class="muted">
                 This is a recruitment, blog, and project site for a university research grant. I used a static site generator, customized a pre-made theme (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>), and dropped it in an S3 bucket.
@@ -86,14 +58,8 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/jekyll-logo.svg class="icon" overflow="visible" %}
-                    Jekyll
-                </li>
-                <li>
-                    {% svg /images/aws-logo.svg class="icon" overflow="visible" %}
-                    Amazon Web Services
-                </li>
+                {% include tech_list_item.html tech="jekyll" %}
+                {% include tech_list_item.html tech="aws" %}
             </ul>
             <p class="muted">
                 You're Looking at it! This is also a static site in a bucket, but from scratch (taking design inspiration from the <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
@@ -113,33 +79,13 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/ruby-logo.svg class="icon" overflow="visible" %}
-                    {% svg /images/rails-logo.svg class="icon" overflow="visible" %} Ruby on Rails
-                </li>
-                <li>
-                    {% svg /images/html-5-logo.svg class="icon" overflow="visible" %}
-                    HTML
-                </li>
-                <li>
-                    {% svg /images/css-logo.svg class="icon" overflow="visible" %}
-                    CSS
-                </li>
-                <li>
-                    {% svg /images/javascript-logo.svg class="icon" overflow="visible" %}
-                    Javascript
-                </li>
-                <li>
-                    {% svg /images/git-logo.svg class="icon" overflow="visible" %}
-                    Git
-                </li>
-                <li>
-                    {% svg /images/bootstrap-logo-2.svg class="icon" overflow="visible" %} Bootstrap
-                </li>
-                <li>
-                    {% svg /images/heroku-logo.svg class="icon" overflow="visible" %} 
-                    Heroku
-                </li>
+                {% include tech_list_item.html tech="rails" %}
+                {% include tech_list_item.html tech="html" %}
+                {% include tech_list_item.html tech="css" %}
+                {% include tech_list_item.html tech="javascript" %}
+                {% include tech_list_item.html tech="git" %}
+                {% include tech_list_item.html tech="bootstrap" %}
+                {% include tech_list_item.html tech="heroku" %}
             </ul>
             <p class="muted">
                 Started with an introduction to the fundamentals and a simple blog, then moved on to building a complete website. I'd toyed around with some programming and basic web pages before, but this was my practical introduction to Ruby on Rails, relational databases, REST, version control, and a high level understanding of the architecture behind a functioning web application.
@@ -154,9 +100,7 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/javascript-logo.svg class="icon" %} Javascript ES6
-                </li>
+                {% include tech_list_item.html tech="javascript" %}
             </ul>
             <p class="muted">30 small vanilla Javascript coding exercises. I'm still working through this one; a sunny sandbox vacation interrupted my progress.</p>
         </dd>
@@ -169,7 +113,7 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>{% svg /images/css-logo.svg class="icon" %} CSS Grid</li>
+                {% include tech_list_item.html tech="css" %}
             </ul>
             <p class="muted">
                 This was a short tutorial, but I feel it's worth including to show that I'm learning modern techniques & best practices.
@@ -181,26 +125,11 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/ruby-logo.svg class="icon" overflow="visible" %}
-                    Ruby
-                </li>
-                <li>
-                    {% svg /images/html-5-logo.svg class="icon" overflow="visible" %}
-                    HTML
-                </li>
-                <li>
-                    {% svg /images/css-logo.svg class="icon" overflow="visible" %}
-                    CSS
-                </li>
-                <li>
-                    {% svg /images/javascript-logo.svg class="icon" overflow="visible" %}
-                    Javascript
-                </li>
-                <li>
-                    {% svg /images/sql-logo.svg class="icon" overflow="visible" %}
-                    SQL
-                </li>
+                {% include tech_list_item.html tech="ruby" %}
+                {% include tech_list_item.html tech="html" %}
+                {% include tech_list_item.html tech="css" %}
+                {% include tech_list_item.html tech="javascript" %}
+                {% include tech_list_item.html tech="sql" %}
             </ul>
             <p class="muted">
                 During the course of my other projects, I worked through several CodeCademy courses (though not generally to 100% completion) when I felt a need to improve my foundational understanding of a given technology. 
@@ -212,26 +141,11 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/generic-code-logo2.svg class="icon" overflow="visible" %}
-                    Fundamentals
-                </li>
-                <li>
-                    {% svg /images/generic-oop-icon.svg class="icon" overflow="visible" %}
-                    Object Oriented Design
-                </li>
-                <li>
-                    {% svg /images/sql-logo.svg class="icon" overflow="visible" %}
-                    Databases
-                </li>
-                <li>
-                    {% svg /images/git-logo.svg class="icon" overflow="visible" %}
-                    Git
-                </li>
-                <li>
-                    {% svg /images/generic-code-logo.svg class="icon" overflow="visible" %}
-                    Quality Assurance
-                </li>
+                {% include tech_list_item.html tech="fundamentals" %}
+                {% include tech_list_item.html tech="oop" %}
+                {% include tech_list_item.html tech="databases" %}
+                {% include tech_list_item.html tech="git" %}
+                {% include tech_list_item.html tech="qa" %}
             </ul>
             <p class="muted">
                 This is where I started, in September of 2017. Over the course of a few weeks I completed approximately 16 hours of video lectures covering the foundational principles of programming.   

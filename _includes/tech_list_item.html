@@ -1,18 +1,14 @@
 <li>
+    {% assign tech = site.data.tech[include.tech] %}
 
-    {% svg "/images/{{ include.icon }}.svg" overflow="visible" class="icon" %}
-
-    {% if include.icon2 %}
-        {% svg "/images/{{ include.icon2 }}.svg" overflow="visible" class="icon" %}
+    {% if tech.icon %}
+        {% svg "/images/{{ tech.icon }}" overflow="visible" class="icon" %}
     {% endif %}
 
-    {{ include.tech }}
+    {% if tech.icon2 %}
+        {% svg "/images/{{ tech.icon2 }}" overflow="visible" class="icon" %}
+    {% endif %}
 
-    
-</li>
-
-<li>
-
-    {{ site.data.tech.aws.name }}
+    {{ tech.name }}
 
 </li>
