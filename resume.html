@@ -15,27 +15,15 @@ permalink: /resume/
         <h3 class="header keyline-bottom">Skills</h3>
         <section class="column">
             <h4>Languages</h4>
-            <ul class="tech-list">
-                {% include tech_list_item.html tech="ruby" %}
-                {% include tech_list_item.html tech="html" %}
-                {% include tech_list_item.html tech="css" %}
-                {% include tech_list_item.html tech="javascript" %}
-                {% include tech_list_item.html tech="sql" %}
-                {% include tech_list_item.html tech="polish" %}
-            </ul>
+
+            {% include tech_list.html technologies="ruby, html, css, javascript, sql, polish" %}
+
         </section>
         <section class="column">
             <h4>Technologies, Frameworks & Services</h4>
-            <ul class="tech-list">
-                {% include tech_list_item.html tech="rails" %}
-                {% include tech_list_item.html tech="jekyll" %}
-                {% include tech_list_item.html tech="git" %}
-                {% include tech_list_item.html tech="linux" %}
 
-                {% include tech_list_item.html tech="aws" %}
-                {% include tech_list_item.html tech="heroku" %}
-                {% include tech_list_item.html tech="bootstrap" %}
-            </ul>
+            {% include tech_list.html technologies="rails, jekyll, git, linux, aws, heroku, bootstrap" %}
+
         </section>
         <section class="both-columns">
             <h4>Strengths</h4>
