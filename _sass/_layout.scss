@@ -33,7 +33,7 @@ article > header {
     }
 }
 
-article > section {
+section:not(:last-child) {
     margin-bottom: 2em;
 }
 
