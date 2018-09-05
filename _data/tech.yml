@@ -1,68 +1,52 @@
-aws: 
+aws:
   icon: aws-logo.svg
   name: Amazon Web Services
-
+bootstrap:
+  icon: bootstrap-logo-2.svg
+  name: Bootstrap
+css:
+  icon: css-logo.svg
+  name: CSS
+databases:
+  icon: sql-logo.svg
+  name: Databases
+fundamentals:
+  icon: generic-code-logo2.svg
+  name: Fundamentals
+git:
+  icon: git-logo.svg
+  name: Git
+heroku:
+  icon: heroku-logo.svg
+  name: Heroku
+html:
+  icon: html-logo.svg
+  name: HTML
+javascript:
+  icon: javascript-logo.svg
+  name: Javascript
+jekyll:
+  icon: jekyll-logo.svg
+  name: Jekyll
+linux:
+  icon: tux.svg
+  name: Linux
+oop:
+  icon: generic-oop-icon.svg
+  name: Object Oriented Design
+polish:
+  icon: poland.svg
+  name: Some Polish
+qa:
+  icon: generic-code-logo.svg
+  name: Quality Assurance
 rails:
   icon: ruby-logo.svg
   icon2: rails-logo.svg
   name: Ruby on Rails
-
-bootstrap: 
-  icon: bootstrap-logo-2.svg
-  name: Bootstrap
-
-heroku:
-  icon: heroku-logo.svg
-  name: Heroku
-
-jekyll:
-  icon: jekyll-logo.svg
-  name: Jekyll
-
-html:
-  icon: html-logo.svg
-  name: HTML
-
-css:
-  icon: css-logo.svg
-  name: CSS
-
-javascript:
-  icon: javascript-logo.svg
-  name: Javascript
-
-git:
-  icon: git-logo.svg
-  name: Git
-
+ruby:
+  icon: ruby-logo.svg
+  name: Ruby
 sql:
   icon: sql-logo.svg
   name: SQL
-
-fundamentals:
-  icon: generic-code-logo2.svg
-  name: Fundamentals
-
-oop:
-  icon: generic-oop-icon.svg
-  name: Object Oriented Design
-
-databases:
-  icon: sql-logo.svg
-  name: Databases
-
-qa:
-  icon: generic-code-logo.svg
-  name: Quality Assurance
-
-ruby: 
-  icon: ruby-logo.svg
-  name: Ruby
-
-linux:
-  icon: tux.svg
-  name: Linux
-
-polish: 
-  icon: poland.svg
-  name: Some Polish
