@@ -1,22 +1,24 @@
+{% comment %}
+     Apparently in Liquid it is not possible to directly define an array. Instead, when using this include, the "technologies" parameter (look in _data/tech.yml) should be a comma + space separated list in string format.
+{% endcomment %}
+
 {% assign tech_array = include.technologies | split: ", " %}
 
 <ul class="tech-list">
-
     {% for tech_id in tech_array %}
         <li>
             {% assign tech = site.data.tech[tech_id] %}
 
             {% if tech.icon %}
-                {% svg "/images/{{ tech.icon }}" overflow="visible" class="icon" %}
+                {% svg "/images/logos/{{ tech.icon }}" overflow="visible" class="icon" %}
             {% endif %}
 
             {% if tech.icon2 %}
-                {% svg "/images/{{ tech.icon2 }}" overflow="visible" class="icon" %}
+                {% svg "/images/logos/{{ tech.icon2 }}" overflow="visible" class="icon" %}
             {% endif %}
 
             {{ tech.name }}
 
         </li>
     {% endfor %}
-
 </ul>
