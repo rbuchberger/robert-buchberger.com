@@ -11,7 +11,7 @@ html {
 body {
     height: 100vh;
     max-width: 100vw;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -21,57 +21,39 @@ main {
 }
 
 article {
-    max-width: 60rem;
-    margin: 0 auto 4rem auto;
-    padding: 0 1rem;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 article > header {
-    margin-bottom: 6rem;
+    margin-bottom: 3em;
+    h1 {
+        text-align: center;
+    }
 }
 
-section {
-    margin-bottom: 6rem;
+article > section {
+    margin-bottom: 2em;
 }
 
 section > header {
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
 }
 
 // Custom page layouts
 
-article.side-header {
+.two-columns {
     display: flex;
-
-    section {
-        padding: 0 2rem;
-    }
-
-    header {
-        max-width: 20%;
-        min-width: 20rem;
-    }
-
-    section.main-content {
-        min-width: 40rem;
-    }
-
-}
-
-.two-columns-with-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-
-    .header {
-        grid-column: 1 / 3;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
 
     .column {
-        grid-column: span 1;
+        max-width: 50%;
+        min-width: 300px;
     }
 
     .both-columns {
-        grid-column: span 2;
+        width: 100%;
     }
 }

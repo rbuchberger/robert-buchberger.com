@@ -1,6 +1,6 @@
 .icon {
     height: 1em;
-    margin: 0 .4rem 0 0;
+    margin: 0 .4em 0 0;
 
     &.icon-big {
         margin-top: 1em;
@@ -33,11 +33,11 @@ a:hover .icon-logo {
 
 ul.tech-list {
     margin-left: 0;
-    font-size: 1.4rem;
+    font-size: 1.1em;
+
     li {
         display: inline-flex;
-        // justify-content: center;
         align-items: center;
-        margin: 0 .8rem .6rem 0;
+        margin: 0 .8em 0 0;
     }
 }

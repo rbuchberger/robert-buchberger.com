@@ -1,42 +1,41 @@
 // Basic, site-wide typography & style
+html {
+    font-size: 18px;
+}
 
 body {
     font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    line-height: 2;
+    line-height: 1.8;
     background-color: var(--background-color);
     color: var(--foreground-color);
 }
 
 h1, h2, h3, h4 {
     font-weight: 200;
-    line-height: 1;
+    line-height: 1.5;
     text-shadow: 2px 2px 4px #0002;
-    padding-bottom: .2em;
 }
 
 h1 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 3rem;
-    margin-bottom: 1em;
+    font-size: 3em;
 }
 
 h3 { 
-    font-size: 2.5rem;
-    margin-bottom: 1em;
+    font-size: 2em;
 }
 
 h4 {
-    font-size: 1.6rem;
-    // margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 300;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
+    font-size: 1em;
 }
 
 a {
@@ -49,24 +48,35 @@ a {
 }
 
 ul {
-    margin-left: 2rem;
-    list-style-type: "-";
+    margin-left: 2em;
+    font-size: 1em;
+    list-style-type: "- ";
     li {
-        padding-left: .5rem;
+        padding-left: .5em;
     }
 
     &.sidebar li {
         list-style-type: none;
         border-left: 1px solid var(--accent-color);
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 }
 
 .subtitle {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.1em;
 }
 
 .text-center {
     text-align: center;
+}
+
+.muted {
+    font-size: .9em;
+    line-height: 1.6;
+    color: var(--light-text-color);
+}
+
+.keyline-bottom {
+    border-bottom: 1px solid var(--accent-color);
 }
