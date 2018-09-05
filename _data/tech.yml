@@ -30,13 +30,13 @@ jekyll:
   name: Jekyll
 linux:
   icon: tux.svg
-  name: Linux
+  name: Linux Command Line
 oop:
   icon: generic-oop-icon.svg
   name: Object Oriented Design
 polish:
   icon: poland.svg
-  name: Some Polish
+  name: Polish (beginner)
 qa:
   icon: generic-code-logo.svg
   name: Quality Assurance
