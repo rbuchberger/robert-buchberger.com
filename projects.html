@@ -4,7 +4,7 @@
 <header>
     <h1>Projects</h1>
     <p>
-        A year ago I didn't know anything about web development; everything below has been accomplished since then despite working another job, deploying to the Middle East, and moving from the US to Poland during that time. I certainly have more to learn, but there's very little I can't teach myself. 
+        A year ago I didn't know anything about web development; everything below has been accomplished since then. During that time I also held another job, deployed to the Middle East, and moved from the US to Poland. I certainly have more to learn, but there's very little I can't teach myself.
     </p>
 </header>
 <section>
@@ -22,22 +22,32 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>
-                    {% svg /images/ruby-logo.svg class="icon" overflow="visible" %}
-                    {% svg /images/rails-logo.svg overflow="visible" class="icon" %}
-                    Ruby on Rails
-                </li>
-                <li>
-                    {% svg /images/bootstrap-logo-2.svg class="icon" overflow="visible" %} Bootstrap
-                </li>
-                <li>
-                    {% svg /images/heroku-logo.svg class="icon" overflow="visible" %}
-                    Heroku
-                </li>
-                <li>
-                    {% svg /images/aws-logo.svg class="icon" overflow="visible" %}
-                    Amazon Web Services
-                </li>
+
+                {% 
+                    include tech_list_item.html
+                    icon="ruby-logo"
+                    icon2="rails-logo"
+                    tech="Ruby on Rails"
+                %}
+
+                {% 
+                    include tech_list_item.html
+                    icon="bootstrap-logo-2"
+                    tech="Bootstrap"
+                %}
+
+                {% 
+                    include tech_list_item.html
+                    icon="heroku-logo"
+                    tech="Heroku"
+                %}
+
+                {% 
+                    include tech_list_item.html
+                    icon="aws-logo"
+                    tech="Amazon Web Services"
+                %}
+
             </ul>
             <p class="muted">
                 This Rails application provides training, bulletin, document library, and volunteer time tracking features to a small component of a county sheriff's office. It followed in the footsteps of the upskill tutorial, using many of the same frameworks and services.
@@ -63,7 +73,7 @@
                 </li>
             </ul>
             <p class="muted">
-                Recruitment, blog, and project page for a university research grant. I used a static site generator, customized a pre-made theme (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>), and dropped it in an S3 bucket.
+                This is a recruitment, blog, and project site for a university research grant. I used a static site generator, customized a pre-made theme (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>), and dropped it in an S3 bucket.
             </p>
         </dd>
 
@@ -86,7 +96,7 @@
                 </li>
             </ul>
             <p class="muted">
-                You're Looking at it! Also a static site in a bucket, but this time I started from scratch (taking design inspiration from the <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
+                You're Looking at it! This is also a static site in a bucket, but from scratch (taking design inspiration from the <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
             </p>
         </dd>
 
@@ -144,7 +154,9 @@
         </dt>
         <dd>
             <ul class="tech-list">
-                <li>{% svg /images/javascript-logo.svg class="icon" %} Vanilla Javascript ES6</li>
+                <li>
+                    {% svg /images/javascript-logo.svg class="icon" %} Javascript ES6
+                </li>
             </ul>
             <p class="muted">30 small vanilla Javascript coding exercises. I'm still working through this one; a sunny sandbox vacation interrupted my progress.</p>
         </dd>

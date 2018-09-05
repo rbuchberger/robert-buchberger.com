@@ -1,0 +1,18 @@
+<li>
+
+    {% svg "/images/{{ include.icon }}.svg" overflow="visible" class="icon" %}
+
+    {% if include.icon2 %}
+        {% svg "/images/{{ include.icon2 }}.svg" overflow="visible" class="icon" %}
+    {% endif %}
+
+    {{ include.tech }}
+
+    
+</li>
+
+<li>
+
+    {{ site.data.tech.aws.name }}
+
+</li>
