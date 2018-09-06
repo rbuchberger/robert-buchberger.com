@@ -36,15 +36,14 @@ ul.tech-list {
     font-size: 1.1em;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
+    &.center {
+        justify-content: center;
+    }
     li {
         display: flex;
         align-items: center;
         margin: 0 .5em;
-    }
-
-    &.right {
-        justify-content: end;
     }
 
 }

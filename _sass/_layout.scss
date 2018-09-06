@@ -71,18 +71,18 @@ section > header {
             } 
         }
 
+        & > section {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
         & > section:nth-child(2) {
-            text-align: right;
             border-right: 1px solid var(--accent-color);
-            padding-right: 1em;
-            padding-top: 1em;
-            padding-bottom: 1em;
+            padding-right: 2em;
         }
 
         & > section:nth-child(3) {
-            padding-top: 1em;
-            padding-left: 1em;
-            padding-bottom: 1em;
+            padding-left: 2em;
         }
     }
 }
