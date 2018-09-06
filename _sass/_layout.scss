@@ -22,15 +22,16 @@ main {
 
 article {
     max-width: 50em;
-    margin: 0 auto;
+    margin: 3em auto;
     padding: 0 1em;
 }
 
 article > header {
-    margin-bottom: 3em;
-    h1 {
+    margin-bottom: 2em;
+    h1, h2 {
         text-align: center;
     }
+
 }
 
 section:not(:last-child) {
@@ -48,12 +49,49 @@ section > header {
     flex-wrap: wrap;
     justify-content: center;
 
+    h3, h4 {
+        padding: 0 .5em;
+    }
+
     .column {
         max-width: 50%;
         min-width: 300px;
+        padding: 0 1em; 
     }
 
     .both-columns {
         width: 100%;
+    }
+
+    &.t-borders {
+        & > :first-child {
+            border-bottom: 1px solid var(--accent-color);
+            margin-bottom: 0;
+        }
+
+        & > :nth-child(2) {
+            text-align: right;
+            border-right: 1px solid var(--accent-color);
+            padding-right: 1em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        & > :nth-child(3) {
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-bottom: 1em;
+        }
+    }
+}
+
+.resume header {
+    font-size: .85em;
+    margin-bottom: 0em;
+    h1, h2 {
+        text-align: left;
+    }
+    p {
+        text-align: right;
     }
 }

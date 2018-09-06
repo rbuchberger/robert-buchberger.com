@@ -12,29 +12,30 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 200;
-    line-height: 1.5;
     text-shadow: 2px 2px 4px #0002;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
+    line-height: 1.5;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2.5em;
+    line-height: 1.5;
 }
 
 h3 { 
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 400;
 }
 
-p {
+p:not(:last-child) {
     margin-bottom: 1em;
     font-size: 1em;
 }
@@ -50,10 +51,10 @@ a {
 
 ul {
     margin-left: 2em;
-    font-size: 1em;
     list-style-type: "- ";
     li {
-        padding-left: .5em;
+        margin-bottom: .5em;
+
     }
 
     &.sidebar li {
@@ -70,6 +71,10 @@ ul {
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .muted {
