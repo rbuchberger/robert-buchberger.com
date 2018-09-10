@@ -26,8 +26,7 @@ h2 {
 }
 
 h3 { 
-    font-size: 1.8em;
-    font-weight: 400;
+    font-size: 1.7em;
 }
 
 h4 {
@@ -51,9 +50,11 @@ a {
 
 ul {
     margin-left: 2em;
-    list-style-type: "- ";
+    list-style-type: disc;
+    list-style-position: inside;
+
     li {
-        margin-bottom: .5em;
+        margin-bottom: 1em;
 
     }
 
