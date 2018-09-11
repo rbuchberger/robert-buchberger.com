@@ -34,6 +34,18 @@ h4 {
     font-weight: 400;
 }
 
+// Use smaller fonts on mobile:
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
 p:not(:last-child) {
     margin-bottom: 1em;
     font-size: 1em;
