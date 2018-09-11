@@ -1,48 +1,64 @@
-dl.project-showcase {
-    display: grid;
-    grid-template-columns: [term] 1fr [description] 2fr;
-    vertical-align: center;
-    // color: var(--background-color);
-    // background-color: var(--foreground-color);
-    dd, dt {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        margin-left: 0em;
-        margin-bottom: 4em;
-        border-top: 1px solid var(--accent-color);
-    }
+ul.project-showcase {
+  margin: 0;
+  padding: 0 1em;
 
-    dt {
-        grid-column: term;
-        padding-right: 2em;
-        margin-right: 0em;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: flex-end;
-        font-weight: bold;
-        text-align: right;
-    }
+  & > li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+  }
 
-    dd {
-        grid-column: description;
-        padding-left: 2em;
-        border-left: 1px solid var(--accent-color);
-    }
+  .name, .description {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--accent-color);
+  }
+
+  .name {
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    font-weight: bold;
+    text-align: right;
+    border-right: 1px solid var(--accent-color);
+  }
+
+  .description {
+    flex-basis: 400px;
+    flex-grow: 2;
+    padding-left: 2em;
+  }
 
     img {
-        grid-column-start: term;
-        grid-column-end: span 2;
-        max-width: 100%;
+        width: 100%;
         margin-bottom: 0em;
         border: 1px solid var(--accent-color);
         border-bottom: none;
     }
 
-    span {
-        padding: 2em;
-        background-color: var(--foreground-color);
+}
+
+@media(max-width: 670px) {
+  // 670 px because that's where flex-wrap kicks in for the description and name (both their flex basis numbers plus article padding)
+  // It's a magic number, I should find a better way to do this.  
+  ul.project-showcase {
+
+    .name {
+      order: -1;
     }
+
+    .description {
+      border-left: 1px solid var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+    }
+
+
+  }
+
 }
 
 dl.stacked {

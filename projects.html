@@ -1,137 +1,141 @@
 ---
 ---
 <article>
-<header>
+  <header>
     <h1>Projects</h1>
     <p>
-        A year ago I didn't know anything about web development; everything below has been accomplished since then. During that time I also held another job, deployed to the Middle East, and moved from the US to Poland. I certainly have more to learn, but there's very little I can't teach myself.
+      A year ago I didn't know anything about web development; everything below has been accomplished since then. During that time I also held another job, deployed to the Middle East, and moved from the US to Poland. I certainly have more to learn, but there's very little I can't teach myself.
     </p>
-</header>
-<section>
+  </header>
+  <section>
     <header>
-        <h2 class="">Real World</h2>
+      <h2 class="">Real World</h2>
     </header>
-    <dl class="project-showcase">
 
+    <ul class="project-showcase">
+
+      <li>
         <img src="/images/Screenshot_monroe-tn-sheriff.png">
-        <dt>
-            <a href="http://monroetnsheriff.org">monroetnsheriff.org</a>
-            <a href="https://github.com/rbuchberger/pd-aux-training">
-                {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
-            </a>
-        </dt>
-        <dd>
+        <div class="name">
+          <a href="http://monroetnsheriff.org">monroetnsheriff.org</a>
+          <a href="https://github.com/rbuchberger/pd-aux-training">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
+          </a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="rails, bootstrap, heroku, aws" %}
+          <p class="muted">
+            This Rails application provides training, bulletin, document library, and volunteer time tracking features to a small component of a county sheriff's office. It followed in the footsteps of the upskill tutorial, using many of the same frameworks and services.
+          </p>
+        </div>
+      </li>
 
-            {% include tech_list.html technologies="rails, bootstrap, heroku, aws" %}
-
-            <p class="muted">
-                This Rails application provides training, bulletin, document library, and volunteer time tracking features to a small component of a county sheriff's office. It followed in the footsteps of the upskill tutorial, using many of the same frameworks and services.
-            </p>
-        </dd>
-
+      <li>
         <img src="/images/Screenshot_LiSEC-Tech.png">
-        <dt>
-            <a href="http://lisec-tech.com">LiSEC-tech.com</a>
-            <a href="https://github.com/rbuchberger/lisec-tech.com">
-                {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
-            </a>
-        </dt>
-        <dd>
+        <div class="name">
+          <a href="http://lisec-tech.com">LiSEC-tech.com</a>
+          <a href="https://github.com/rbuchberger/lisec-tech.com">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
+          </a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="jekyll, aws" %}
+          <p class="muted">
+            This is a recruitment, blog, and project site for a university research grant. I used a static site generator, customized a pre-made theme (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>), and dropped it in an S3 bucket.
+          </p>
+        </div>
+      </li>
 
-            {% include tech_list.html technologies="jekyll, aws" %}
-
-            <p class="muted">
-                This is a recruitment, blog, and project site for a university research grant. I used a static site generator, customized a pre-made theme (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>), and dropped it in an S3 bucket.
-            </p>
-        </dd>
-
+      <li>
         <img src="/images/Screenshot_rbuchberger-info.png">
-        <dt>
-            <a href="http://robert-buchberger.com">robert-buchberger.com</a>
-            <a href="https://github.com/rbuchberger/rbuchberger.info">
-                {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
-            </a>
-        </dt>
-        <dd>
+        <div class="name">
+          <a href="http://robert-buchberger.com">robert-buchberger.com</a>
+          <a href="https://github.com/rbuchberger/rbuchberger.info">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
+          </a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="jekyll, aws" %}
+          <p class="muted">
+            You're Looking at it! This is also a static site in a bucket, but from scratch (taking design inspiration from the <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-            {% include tech_list.html technologies="jekyll, aws" %}
+  <section>
 
-            <p class="muted">
-                You're Looking at it! This is also a static site in a bucket, but from scratch (taking design inspiration from the <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
-            </p>
-        </dd>
-
-    </dl>
-</section>
-<section>
     <header>
-        <h2 class="">Tutorials & Courses</h2>
+      <h2 class="">Tutorials & Courses</h2>
     </header>
-    <dl class="project-showcase">
-        <dt>
-            <a href="https://upskillcourses.com/p/essential-web-developer-course">Upskill Essential Web Developer Course</a>
-            <a href="https://github.com/rbuchberger/upskill_saas_tutorial">{% svg /images/logos/github-mark.svg overflow="visible" class="icon icon-big icon-color icon-color" %}</a>
-        </dt>
-        <dd>
 
-            {% include tech_list.html technologies="rails, html, css, javascript, git, bootstrap, heroku" %}
+    <ul class="project-showcase">
 
-            <p class="muted">
-                Started with an introduction to the fundamentals and a simple blog, then moved on to building a complete website. I'd toyed around with some programming and basic web pages before, but this was my practical introduction to Ruby on Rails, relational databases, REST, version control, and a high level understanding of the architecture behind a functioning web application.
-            </p>
-        </dd>
+      <li>
+        <div class="name">
+          <a href="https://upskillcourses.com/p/essential-web-developer-course">Upskill Essential Web Developer Course</a>
+          <a href="https://github.com/rbuchberger/upskill_saas_tutorial">{% svg /images/logos/github-mark.svg overflow="visible" class="icon icon-big icon-color icon-color" %}</a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="rails, html, css, javascript, git, bootstrap, heroku" %}
+          <p class="muted">
+            Started with an introduction to the fundamentals and a simple blog, then moved on to building a complete website. I'd toyed around with some programming and basic web pages before, but this was my practical introduction to Ruby on Rails, relational databases, REST, version control, and a high level understanding of the architecture behind a functioning web application.
+          </p>
+        </div>
+      </li>
 
-        <dt>
-            <a href="https://javascript30.com">Javascript30</a>
-            <a href="https://github.com/rbuchberger/JavaScript30">
-                {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
-            </a>
-        </dt>
-        <dd>
+      <li>
+        <div class="name">
+          <a href="https://javascript30.com">Javascript30</a>
+          <a href="https://github.com/rbuchberger/JavaScript30">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
+          </a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="javascript" %}
+          <p class="muted">30 small vanilla Javascript coding exercises. I'm still working through this one; a sunny sandbox vacation interrupted my progress.</p>
+        </div>
+      </li>
 
-            {% include tech_list.html technologies="javascript" %}
+      <li>
+        <div class="name">
+          <a href="https://www.youtube.com/watch?v=M3qBpPw77qo">Traversy's CSS Grid tutorial</a>
+          <a href="https://github.com/rbuchberger/traversy-css-grid-tutorial">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
+          </a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="css" %}
+          <p class="muted">
+            This was a short tutorial, but I feel it's worth including to show that I'm learning modern techniques & best practices.
+          </p>
+        </div>
+      </li>
 
-            <p class="muted">30 small vanilla Javascript coding exercises. I'm still working through this one; a sunny sandbox vacation interrupted my progress.</p>
-        </dd>
+      <li>
+        <div class="name">
+          <a href="https://www.codecademy.com/">CodeCademy</a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="ruby, html, css, javascript, sql" %}
+          <p class="muted">
+            During the course of my other projects, I worked through several CodeCademy courses (though not generally to 100% completion) when I felt a need to improve my foundational understanding of a given technology. 
+          </p>
+        </div>
+      </li>
 
-        <dt>
-            <a href="https://www.youtube.com/watch?v=M3qBpPw77qo">Traversy's CSS Grid tutorial</a>
-            <a href="https://github.com/rbuchberger/traversy-css-grid-tutorial">
-                {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" %}
-            </a>
-        </dt>
-        <dd>
-
-            {% include tech_list.html technologies="css" %}
-
-            <p class="muted">
-                This was a short tutorial, but I feel it's worth including to show that I'm learning modern techniques & best practices.
-            </p>
-        </dd>
-
-        <dt>
-            <a href="https://www.codecademy.com/">CodeCademy</a>
-        </dt>
-        <dd>
-
-            {% include tech_list.html technologies="ruby, html, css, javascript, sql" %}
-
-            <p class="muted">
-                During the course of my other projects, I worked through several CodeCademy courses (though not generally to 100% completion) when I felt a need to improve my foundational understanding of a given technology. 
-            </p>
-        </dd>
-
-        <dt>
-            <a href="https://https://www.lynda.com/">Lynda</a>
-        </dt>
-        <dd>
-
-            {% include tech_list.html technologies="fundamentals, oop, databases, git, qa" %}
-
-            <p class="muted">
-                This is where I started, in September of 2017. Over the course of a few weeks I completed approximately 16 hours of video lectures covering the foundational principles of programming.   
-            </p>
-        </dd>
-    </dl>
-</section>
+      <li>
+        <div class="name">
+          <a href="https://https://www.lynda.com/">Lynda</a>
+        </div>
+        <div class="description">
+          {% include tech_list.html technologies="fundamentals, oop, databases, git, qa" %}
+          <p class="muted">
+            This is where I started, in September of 2017. Over the course of a few weeks I completed approximately 16 hours of video lectures covering the foundational principles of programming.   
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
 </article>
