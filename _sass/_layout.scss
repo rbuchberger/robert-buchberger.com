@@ -99,3 +99,10 @@ address.resume {
         flex-basis: 50%;
     }
 }
+
+@media (max-width: 600px) {
+
+  .hidden-mobile {
+    display: none !important;
+  }
+}

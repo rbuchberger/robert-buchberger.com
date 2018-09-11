@@ -39,7 +39,7 @@ p:not(:last-child) {
     font-size: 1em;
 }
 
-a {
+a, button {
     color: var(--accent-color);
     text-decoration: none;
     transition-duration: 0.4s;

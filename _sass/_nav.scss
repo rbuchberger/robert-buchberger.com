@@ -1,45 +1,122 @@
 // navbar
 
 nav.main {
-    border-top: solid 3px var(--accent-color);
-    padding: 0 3rem;
+  border-top: solid 3px var(--accent-color);
+
+  ul {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: var(--foreground-color);
+  }
+
+  button.active, li.active {
+    color: var(--background-color);
+    box-shadow: 4px 3px 7px #0002;
+    background-color: var(--accent-color);
+    svg path {
+      fill: var(--background-color);
+    }
+
+    &:hover {
+      color: var(--foreground-color);
+    }
+
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+  }
+
+}
+
+// Desktop styles:
+@media (min-width: 600px) {
+  nav.main {
+    padding: 0 1em;
 
     ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        list-style: none; 
-        padding: 0;
+      flex-direction: row;
+      justify-content: end;
+    }
+
+    // li {
+      // margin: 0 1em;
+    // }
+
+    a {
+      padding: 0 1em;
+    }
+
+    button.hamburger {
+      display: none;
+    }
+
+    // Move first item (homepage link) to the left
+    li:first-child {
+      margin-right: auto;
+    }
+  }
+
+}
+
+// Mobile styles
+@media (max-width: 600px) {
+  button.hamburger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+
+    svg path {
+      fill: var(--accent-color); 
+    }
+
+  }
+
+  nav.main {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    a {
+      padding: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
     }
 
     li {
-        padding: 0;
-        line-height: 2;
-
-        // Move first item (homepage link) to the left
-        &:first-child {
-            margin-right: auto;
-        }
-
+      width: 100%;
+      padding: 0;
     }
+  }
+}
 
-    li.active {
-        a {
-            color: var(--background-color);
-            box-shadow: 4px 3px 7px #0002;
-        }
-        background-color: var(--accent-color);
-    }
+.hamburger {
 
-    a {
-        color: var(--foreground-color);
-        display: block;
-        padding: 0 1.5rem;
-
-        &:hover {
-            color: var(--accent-color);
-        }
-    }
+  svg {
+    padding: 0 .5em;
+  }
 
 }
 
