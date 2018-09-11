@@ -85,6 +85,7 @@ section > header {
 
     h2 {
         font-size: 2em;
+        margin-bottom: 2em;
 
         // Wrapped dev and FE in their own divs, so they wrap together.
         display: flex;
@@ -106,7 +107,7 @@ section > header {
 
       p {
         line-height: 1;
-        padding: 0 1em;
+        padding: 0 1.5em;
         font-size: .85em;
         text-align: center;
       }

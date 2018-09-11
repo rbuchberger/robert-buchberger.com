@@ -34,6 +34,11 @@ h4 {
     font-weight: 400;
 }
 
+strong {
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
 // Use smaller fonts on mobile:
 
 @media (max-width: 600px) {
@@ -62,8 +67,8 @@ a, button {
 
 ul {
     margin-left: 2em;
-    list-style-type: disc;
-    list-style-position: inside;
+    // list-style-type: disc;
+    // list-style-position: inside;
 
     li {
         margin-bottom: 1em;
@@ -93,6 +98,10 @@ ul {
 .muted {
     font-size: .9em;
     line-height: 1.6;
+    color: var(--light-text-color);
+}
+
+.light-text {
     color: var(--light-text-color);
 }
 
