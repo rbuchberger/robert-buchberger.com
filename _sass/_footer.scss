@@ -3,9 +3,10 @@
 footer.main {
     flex-grow: 0;
     text-align: center;
-    border-bottom: 3px solid var(--accent-color);
+    padding: 0 1em;
 
     p {
         margin-bottom: 0;
+        line-height: 1.3;
     }
 }
