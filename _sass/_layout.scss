@@ -46,26 +46,36 @@ section > header {
 // Custom page layouts
 
 .two-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    display: grid;
+    grid-gap: 2em;
+
+    @media(min-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 699px) {
+      grid-template-columns: 1fr;
+    }
 
     .column {
-      flex-basis: 300px;
-      flex-grow: 1;
-      margin: 0 1em; 
+      // flex-basis: 300px;
+      // flex-grow: 1;
+      // margin: 0 1em; 
     }
 
     .both-columns {
-        width: 100%;
+      span: 2;
     }
 
     // Pad the bottom of inline columns, when stacked
-    @media (max-width: 600px) {
-      .column:not(:last-child) {
-        margin-bottom: 2em;
-      }
-    }
+    // @media (max-width: 600px) {
+      // .column:not(:last-child) {
+        // margin-bottom: 2em;
+      // }
+    // }
 
 }
 
