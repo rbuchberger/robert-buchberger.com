@@ -46,9 +46,7 @@ section > header {
 // Custom page layouts
 
 .two-columns {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
+
     display: grid;
     grid-gap: 2em;
 
@@ -60,22 +58,9 @@ section > header {
       grid-template-columns: 1fr;
     }
 
-    .column {
-      // flex-basis: 300px;
-      // flex-grow: 1;
-      // margin: 0 1em; 
-    }
-
     .both-columns {
       span: 2;
     }
-
-    // Pad the bottom of inline columns, when stacked
-    // @media (max-width: 600px) {
-      // .column:not(:last-child) {
-        // margin-bottom: 2em;
-      // }
-    // }
 
 }
 
