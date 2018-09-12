@@ -3,12 +3,12 @@ s3_bucket: robert-buchberger.com
 index_document: index.html
 error_document: error.html
 
+gzip: true
 gzip:
   - .html
   - .css
   - .md
   - .js
-gzip_zopfli: true
 
 cloudfront_distribution_id: E1JRTPAZMUH86G
 
