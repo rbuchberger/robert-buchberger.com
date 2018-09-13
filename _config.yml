@@ -7,3 +7,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+svg:
+  optimize: true
