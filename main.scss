@@ -11,34 +11,35 @@
 
 // Site-wide color palette:
 :root {
-    --accent-color: #27A822;
-    --accent-hover-color: #267723;
-    --background-color: #FAFAFA;
-    --foreground-color: #464646;
-    --light-text-color: #636363;
+  // --accent-color: #27A822;
+  --accent-color: #028430;
+  --accent-hover-color: #843002;
+  --background-color: #FAFAFA;
+  --foreground-color: #464646;
+  --light-text-color: #636363;
 }
 
 // Special items
 
 // Index Page
 .circle-portrait {
-    display: block;
-    max-width: 80%;
-    border-radius: 50%;
-    margin: 5em auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 50%;
+  margin: 5em auto;
 
-    @media (max-width: 500px) {
-      max-width: 300px;
-      max-height: 300px;
-      width: 80%;
+  @media (max-width: 500px) {
+    max-width: 300px;
+    max-height: 300px;
+    width: 80%;
 
-      // 2em is the article padding.
-      // This is a hack because we can't set height as a function of parent element width. We have to use the viewport width, which only works well for smaller viewports.
-      height: calc( .8 * (100vw - 2em) );
-    }
+    // 2em is the article padding.
+    // This is a hack because we can't set height as a function of parent element width. We have to use the viewport width, which only works well for smaller viewports.
+    height: calc( .8 * (100vw - 2em) );
+  }
 
-    @media (min-width: 501px) {
-      width: 300px;
-      height: 300px;
-    }
+  @media (min-width: 501px) {
+    width: 300px;
+    height: 300px;
+  }
 }
