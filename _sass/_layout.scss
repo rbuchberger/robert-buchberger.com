@@ -49,11 +49,11 @@ section > header {
   display: grid;
   grid-gap: 2em;
 
-  @media (min-width: 700px) {
+  @media screen and (min-width: 700px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 699px) {
+  @media screen and (max-width: 699px) {
     grid-template-columns: 1fr;
   }
 
@@ -80,7 +80,7 @@ section > header {
     font-size: 2em;
     margin-bottom: 2em;
 
-    // Wrapped dev and FE in their own divs, so they wrap together.
+    // Putting phrases in their own divs, so they wrap together.
     display: flex;
     flex-wrap: wrap;
 

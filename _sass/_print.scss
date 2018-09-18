@@ -1,0 +1,78 @@
+// Print formatting, mostly for the resume
+
+@media print {
+  body > header, body > footer {
+    display: none;
+  }
+
+  html body {
+    font-size: 11px;
+    border: none;
+    background: none;
+    color: black;
+  }
+
+  body article {
+    margin: 2em 1em 1em 1em;
+  }
+
+  article.resume {
+    max-width: 100%;
+
+    p {
+      margin-bottom: .5em;
+    }
+
+    & > header {
+      margin-bottom: 1em;
+
+      & > h2 {
+        margin-bottom: 1em;
+      }
+
+      & > address {
+        margin-top: 0;
+      }
+
+    }
+
+    & > section:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    & ul.strengths li {
+      margin-bottom: .4em;
+      display: block;
+
+      strong {
+        display: inline-block;
+        vertical-align: top;
+        width: 15%;
+      }
+
+      div {
+        display: inline-block;
+        width: 85%;
+      }
+    }
+  }
+
+  section.two-columns {
+    display: inline-block;
+    width: 100%;
+
+    section.column {
+      display: inline-block;
+      max-width: 48%;
+      width: 48%;
+    }
+
+    section.column:first-child {
+      float: left;
+    }
+
+    section.column:nth-child(2) {
+      float: right;
+    }
+  }
+}

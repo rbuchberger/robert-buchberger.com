@@ -1,37 +1,37 @@
 // Basic, site-wide typography & style
 html {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.8;
-    background-color: var(--background-color);
-    color: var(--foreground-color);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.8;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
 }
 
 h1, h2, h3, h4 {
-    font-weight: 200;
-    text-shadow: 2px 2px 4px #0002;
+  font-weight: 200;
+  text-shadow: 2px 2px 4px #0002;
 }
 
 h1 {
-    font-size: 5em;
-    line-height: 1.5;
+  font-size: 5em;
+  line-height: 1.5;
 }
 
 h2 {
-    font-size: 2.5em;
-    line-height: 1.5;
+  font-size: 2.5em;
+  line-height: 1.5;
 }
 
-h3 { 
-    font-size: 1.7em;
+h3 {
+  font-size: 1.7em;
 }
 
 h4 {
-    font-size: 1.3em;
-    font-weight: 400;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 
 strong {
@@ -52,61 +52,59 @@ strong {
 }
 
 p:not(:last-child) {
-    margin-bottom: 1em;
-    font-size: 1em;
+  margin-bottom: 1em;
+  font-size: 1em;
 }
 
 a, button {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition-duration: 0.4s;
-    &:hover {
-        color: var(--accent-hover-color);
-    }
+  color: var(--accent-color);
+  text-decoration: none;
+  transition-duration: 0.4s;
+
+  &:hover {
+    color: var(--accent-hover-color);
+  }
 }
 
 ul {
-    margin-left: 2em;
-    // list-style-type: disc;
-    // list-style-position: inside;
+  margin-left: 2em;
 
-    li {
-        margin-bottom: 1em;
+  li {
+    margin-bottom: 1em;
+  }
 
-    }
-
-    &.sidebar li {
-        list-style-type: none;
-        border-left: 1px solid var(--accent-color);
-        margin-bottom: 1em;
-    }
+  &.sidebar li {
+    list-style-type: none;
+    border-left: 1px solid var(--accent-color);
+    margin-bottom: 1em;
+  }
 }
 
 .subtitle {
-    font-style: italic;
-    font-size: 1.1em;
+  font-style: italic;
+  font-size: 1.1em;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .muted {
-    font-size: .9em;
-    line-height: 1.6;
-    color: var(--light-text-color);
+  font-size: .9em;
+  line-height: 1.6;
+  color: var(--light-text-color);
 }
 
 .light-text {
-    color: var(--light-text-color);
+  color: var(--light-text-color);
 }
 
 .keyline-bottom {
-    border-bottom: 1px solid var(--accent-color);
-    line-height: 1.2;
-    margin-bottom: .6em;
+  border-bottom: 1px solid var(--accent-color);
+  line-height: 1.2;
+  margin-bottom: .6em;
 }
