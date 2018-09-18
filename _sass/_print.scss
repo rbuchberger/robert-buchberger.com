@@ -1,6 +1,7 @@
 // Print formatting, mostly for the resume
 
 @media print {
+
   body > header, body > footer {
     display: none;
   }
@@ -12,8 +13,16 @@
     color: black;
   }
 
+  p.muted {
+    color: black;
+  }
+
+  html dl.stacked dd {
+    margin-bottom: 1em;
+  }
+
   body article {
-    margin: 2em 1em 1em 1em;
+    margin: 2em .5em .5em .5em;
   }
 
   article.resume {
@@ -23,8 +32,12 @@
       margin-bottom: .5em;
     }
 
+    p.subtitle {
+      margin-bottom: 0;
+    }
+
     & > header {
-      margin-bottom: 1em;
+      margin-bottom: 2.5em;
 
       & > h2 {
         margin-bottom: 1em;
@@ -32,6 +45,9 @@
 
       & > address {
         margin-top: 0;
+        p {
+          font-size: 1em;
+        }
       }
 
     }
@@ -41,7 +57,7 @@
     }
 
     & ul.strengths li {
-      margin-bottom: .4em;
+      margin-bottom: .7em;
       display: block;
 
       strong {
@@ -53,6 +69,7 @@
       div {
         display: inline-block;
         width: 85%;
+        color: black;
       }
     }
   }
@@ -75,4 +92,5 @@
       float: right;
     }
   }
+
 }
