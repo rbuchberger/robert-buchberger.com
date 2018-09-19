@@ -2,19 +2,18 @@
 title: Aviation and Programming
 summary: "Two different worlds with surprising similarities"
 image: 
-  url: https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-sq6dfMm/0/ef4c50da/XL/RAB_20160826_0509-XL.jpg
+  url: https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-p5jP4Bd/0/b9111b61/XL/RAB_20160819_0148-XL.jpg
   alt: C-130s on the Runway
-  caption: "Formation takeoff, humid day in Honolulu"
+  caption: "View from my office"
 
 ---
 
-I've been in the aviation industry for nearly ten years now, and programming in earnest for the past
-year. These two industries, though obviously entirely different, have a few things to learn from
-each other.
+I've been working on airplanes for nearly ten years now, and programming in earnest for the past year. These
+two industries, though obviously entirely different, have a few things to learn from each other.
 
-# My background: starting as a mechanic
+## My background as a mechanic
 
-I started out as a C-130 mechanic, working in a back shop on mechanical systems such as the flight
+I started out as a C-130 Crew Chief, working in a back shop on mechanical systems such as the flight
 controls and landing gear. As one of my mentors put it (in a thick southern drawl): "Once you take
 somethin' apart, you understand it". Over the course of 3 years I increasingly understood the guts
 of the airplane, manipulating and disassembling critical components that rarely see the light of
@@ -24,13 +23,15 @@ As we worked on these 28 year old airplanes, our biggest concern was the people 
 large aircraft are built with a great deal of redundancy, many of the components I worked on had no
 backups. There is no practical way to add a second set of wheels in case the first doesn't extend
 properly, and no way to add a second pair of ailerons in case the first jam up. These systems *must*
-function properly. 
+function properly. It's the sort of thing that's always on your mind as you work.
 
 I learned to read, understand, and follow documentation to the letter. I learned to work slowly,
-carefully, consistently, and deliberately; when a single lost screw on a bad day could jam up the
+carefully, consistently, and deliberately. When a single lost screw on a bad day could jam up the
 flight controls and kill everyone on board, *you don't lose screws*.
 
-# Going to Fly
+## Going to Fly
+
+![Formation Takeoff](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-C86j5bf/0/69996de3/XL/RAB_20160826_0496-XL.jpg)
 
 After 3 years as a mechanic, I cross-trained to become a Flight Engineer on the same airplanes I'd
 been maintaining. What's a Flight Engineer? That's a great question, and not entirely simple to
@@ -46,20 +47,17 @@ checklist can overheat a system, or give the whole crew hypoxia, you continue to
 deliberately, and consistenly. You learn that some mistakes are forgivable, and some are not. 
 
 As a mechanic, the only people I generally interacted with were my supervisors and coworkers. Now,
-as an engineer, the only time I generally work with another engineer is my yearly checkride.
-Instead I integrate with a crew of 6, giving meaningful, timely, and useful input. Your
-interpersonal skills improve in that situation; you learn to disagree and point out mistakes,
-productively and without insult (explicit or implied). You learn to have your own mistakes and
-failings pointed out in a similar manner, without taking offense. These are the strengths that make
-a crewed aircraft so effective; we live and die together, and all criticism is for the sake of
-future success. Selfishness doesn't last long in that world.
+as an engineer, the only time I work with another engineer is my yearly checkride.  Instead I
+integrate with a crew of 6, giving meaningful, timely, and useful input. Your interpersonal skills
+improve in that situation; you learn to disagree and point out mistakes, productively and without
+insult (explicit or implied). You learn to have your own mistakes and failings pointed out in a
+similar manner, without taking offense. These are the strengths that make a crewed aircraft so
+effective; we live and die together, and all criticism is for the sake of future success. Hubris
+doesn't last long in that world.
 
-# So how does this relate to programming?
+## So how does this relate to programming?
 
-Software is conceptual in nature, existing in a universe with entirely different rules from ours.
-We write instructions and a computer carries them out; change the instructions, and the program
-itself changes. Airplanes are physical and mechanical (especially the ones I fly on). They obey the
-same laws we do, and a given aircraft doesn't change much year over year.
+![Herc over the ocean](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-9BXjpgm/0/fd89842e/XL/RAB_20160826_0643-XL.jpg)
 
 On the surface, they're clearly entirely unrelated, but the more you dig the more similarities
 appear. Take the C-130 electrical system for example: It's composed of 4 AC and 2 DC buses,
@@ -67,7 +65,7 @@ appear. Take the C-130 electrical system for example: It's composed of 4 AC and 
 `number_4_engine_generator` an instance of the class `EngineGenerator` which has its `.spin` method called
 by the `number_4_engine`, an excellent metaphor emerges.
 
-## Encapsulation
+### Encapsulation
 
 It would certainly be possible to activate and deactivate an engine generator by connecting and
 disconnecting wires within it while the engine is running (and there are legends about this sort of
@@ -76,7 +74,7 @@ to accomplish this. While that generator is operating, I don't know what the var
 coils are doing within it are doing, but I can monitor its frequency and voltage to know that it's
 working properly. It's *encapsulated*. 
 
-## Abstraction
+### Abstraction
 
 An `EngineGenerator` serves exactly one purpose: to generate AC electrical power.  If you understand
 that, and you know its interactions, you don't need to know its inner workings in order to use it.
@@ -84,7 +82,7 @@ The electrical shop can completely understand one, disassemble it, and fix it, w
 shop doesn't need to know about generators in order to fix their electric pumps. The fat, dumb, and
 happy Flight Engineer doesn't need to know either of those things in order to use both.
 
-## Inheritence
+### Inheritence
 
 Both an aircraft and a program are incredibly complex, often so complex that no single person can
 maintain a working knowledge of the entire system, and yet they are built up on the repeated use of
@@ -93,34 +91,38 @@ indication of engine RPM is powered by a small "tachometer" generator on the eng
 spin and produce power; so if we have a parent class of `Generator`, with methods `.spin` and
 `.power`, both `TachGenerator` and `EngineGenerator` can *inherit* from it.
 
-## Polymorphism
+### Polymorphism
 
 As I said, all generators spin and produce power. However, an engine generator is rated for 40,000
 watts and a tach generator produces just enough power to move a needle on a dial. Even though we
 call the same `.spin` and `.power` methods on them, we've modified those methods as required.
 
-# Nice regurgitation. What else? 
+## Nice regurgitation. What else? 
 
-Well, both Aviation and Programming are worlds of somewhat abstract, conceptual rules, of which some
+![Hercs over the ocean](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-GHrCv38/0/e9d8f31b/XL/RAB_20160829_0876-XL.jpg)
+
+Well, 
+
+* Both Aviation and Programming are worlds of somewhat abstract, conceptual rules, of which some
 are flexible and some are *absolutely* not. There's an art to not only knowing best practices, but
-knowing when they apply, and knowing when they should be avoided. In some situations, deviating from
-the checklist is not just acceptable, but necessary. (In case it needs to be stated, there is a
-world of difference between making a single, justified, rare exception to best practice, and failing
-to apply it because you don't know it.)
+knowing how to apply them, and when to avoid them. In some situations, deviating from the checklist
+is not just acceptable, but necessary. (In case it needs to be stated, there is a world of
+difference between making a single, justified, rare exception to best practice, and failing to apply
+it because you don't know it.)
 
-Programs are generally built by teams of people, and the success of a program generally requires the
+* Programs are generally built by teams of people, and the success of a program generally requires the
 success of all its parts. There is an art to disagreeing productively, giving and receiving useful
 feedback in a way that's easy to swallow, which is required both on a software team and within an
 aircrew. You need a kind of empathy, to understand how the words you are saying will sound
 to the person receiving them, or how the words you are hearing are meant by the person saying them.
 
-You could say that reliability is an important component of both aviation and web development.
+* You could say that reliability is an important component of both aviation and web development.
 Redundant systems, fail-safes, and ironclad procedures are common to prevent unlikely disasters.
 
-Aircraft may not change much, but the regulations and procedures surrounding them sure do. Staying
+* Aircraft may not change much, but the regulations and procedures surrounding them sure do. Staying
 up to date on them requires frequent study, much like keeping up with the latest updates and
 frameworks. 
 
-# So what's your point?
+## So what's your point?
 
 Nerdy Flight Engineers can make good web developers. 
