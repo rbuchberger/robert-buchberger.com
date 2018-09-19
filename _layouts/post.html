@@ -11,7 +11,10 @@ layout: default
       <div></div> 
     </div>
     {% if page.image %}
-      {% include "figure.html" image=page.image %}
+      <figure>
+        <img src="{{ page.image.url }}" alt="{{ page.image.alt }}">
+        <figcaption>{{ page.image.caption }}</figcaption>
+      </figure>
     {% endif %}
   </header>
   {{ content }}
