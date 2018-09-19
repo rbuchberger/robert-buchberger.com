@@ -134,6 +134,24 @@ ul.strengths {
   }
 }
 
+// Place a p tag in between 2 empty divs.
+.keyline-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  p {
+    margin: 0 1em;
+  }
+
+  div {
+    flex-grow: 1;
+    background-color: var(--accent-color);
+    content: "";
+    height: 1px;
+  }
+}
+
 // Mobile tweaks
 @media (max-width: 650px) {
   .resume header {

@@ -1,0 +1,53 @@
+article.post {
+
+  header {
+    margin-top: 5em;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: .5em;
+      line-height: 0;
+    }
+
+    p.post-date {
+      font-size: .8em;
+      margin-bottom: .3em;
+      font-style: italic;
+    }
+
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: .9em;
+    color: var(--light-text-color);
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1.1em;
+    text-align: justify;
+  }
+}

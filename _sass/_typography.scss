@@ -39,6 +39,16 @@ strong {
   font-size: 1.05em;
 }
 
+em {
+  font-style: italic;
+}
+
+code {
+  font-family: monospace;
+  font-size: .8em;
+  background: #eee;
+  padding: .1em .5em;
+}
 // Use smaller fonts on mobile:
 
 @media (max-width: 600px) {

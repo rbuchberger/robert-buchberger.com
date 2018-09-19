@@ -1,2 +1,14 @@
 ---
 ---
+
+<article>
+  <h1 class="text-center keyline-bottom">Blog</h1>
+
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>
