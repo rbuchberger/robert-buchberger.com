@@ -16,3 +16,40 @@ defaults:
 
 svg:
   optimize: true
+
+picture:
+  source: images
+  output: images/generated
+  markup: picture
+  strip_metadata: false
+  presets:
+    # Full width pictures
+    default:
+      ppi: [1, 1.5]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_lrg:
+        media: "(min-width: 40em)"
+        width: 700
+      source_med:
+        media: "(min-width: 30em)"
+        width: 450
+      source_default:
+        width: 350
+        height: 200
+    # Half width pictures
+    half:
+      ppi: [1, 1.5]
+      attr:
+        data-location: "{{location}}"
+        data-active: nil
+      source_lrg:
+        media: "(min-width: 40em)"
+        width: 400
+      source_med:
+        media: "(min-width: 30em)"
+        width: 250
+      source_default:
+        width: 350
+        height: 250
