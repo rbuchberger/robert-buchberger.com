@@ -1,52 +1,55 @@
 aws:
   icon: aws-logo.svg
-  name: Amazon Web Services
+  label: Amazon Web Services
 bootstrap:
   icon: bootstrap-logo-2.svg
-  name: Bootstrap
+  label: Bootstrap
 css:
   icon: css-logo.svg
-  name: CSS
+  label: CSS
 databases:
   icon: sql-logo.svg
-  name: Databases
+  label: Databases
 fundamentals:
   icon: generic-code-logo2.svg
-  name: Fundamentals
+  label: Fundamentals
 git:
   icon: git-logo.svg
-  name: Git
+  label: Git
 heroku:
   icon: heroku-logo.svg
-  name: Heroku
+  label: Heroku
 html:
   icon: html-logo.svg
-  name: HTML
+  label: HTML
 javascript:
   icon: javascript-logo.svg
-  name: Javascript
+  label: Javascript
 jekyll:
   icon: jekyll-logo.svg
-  name: Jekyll
+  label: Jekyll
 linux:
   icon: tux.svg
-  name: Linux Command Line
+  label: Linux Command Line
 oop:
   icon: generic-oop-icon.svg
-  name: Object Oriented Design
+  label: Object Oriented Design
 polish:
   icon: poland.svg
-  name: Polish (beginner)
+  label: Polish (beginner)
 qa:
   icon: generic-code-logo.svg
-  name: Quality Assurance
+  label: Quality Assurance
 rails:
-  icon: ruby-logo.svg
-  icon2: rails-logo.svg
-  name: Ruby on Rails
+  icon: rails-logo.svg
+  icon2: ruby-logo.svg
+  label: Ruby on Rails
 ruby:
   icon: ruby-logo.svg
-  name: Ruby
+  label: Ruby
 sql:
   icon: sql-logo.svg
-  name: SQL
+  label: SQL
+rbuchberger:
+  icon: shit.png
+  label: Robert Buchberger

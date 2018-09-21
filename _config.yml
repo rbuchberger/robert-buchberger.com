@@ -1,5 +1,6 @@
 plugins:
   - jekyll-inline-svg 
+  - jekyll_icon_list
 
 defaults:
   -
@@ -16,6 +17,12 @@ defaults:
 
 svg:
   optimize: true
+
+icon_list:
+  default_path: /images/logos/
+  defaults:
+    ul: class="tech-list"
+    svg: overflow="visible" class="icon"
 
 picture:
   source: images
