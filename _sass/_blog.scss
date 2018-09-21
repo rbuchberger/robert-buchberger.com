@@ -1,0 +1,60 @@
+article.post {
+
+  margin-bottom: 5em;
+
+  header {
+    margin-top: 5em;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: .5em;
+      line-height: 0;
+    }
+
+    p.post-date {
+      font-size: .8em;
+      margin-bottom: .3em;
+      font-style: italic;
+    }
+
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+  }
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: .9em;
+    color: var(--light-text-color);
+  }
+
+  h2 {
+    font-size: 2em;
+    border-bottom: 1px solid var(--accent-color);
+    margin-bottom: .5em;
+    margin-top: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    border-left: 1px solid var(--accent-color);
+    padding-left: .5em;
+    line-height: 1;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-size: 1.05em;
+    text-align: justify;
+    margin-bottom: 1.5em;
+  }
+}
