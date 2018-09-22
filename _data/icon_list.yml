@@ -50,6 +50,3 @@ ruby:
 sql:
   icon: sql-logo.svg
   label: SQL
-rbuchberger:
-  icon: shit.png
-  label: Robert Buchberger
