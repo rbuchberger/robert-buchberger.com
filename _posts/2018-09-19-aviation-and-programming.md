@@ -1,15 +1,14 @@
 ---
 title: Aviation and Programming
-summary: "Two different worlds with surprising similarities"
+summary: 
+  I've been working on airplanes for nearly ten years now, and programming in earnest for the past year. These
+  two industries, though obviously entirely different, have a few things to learn from each other.
 image: 
   url: https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-p5jP4Bd/0/b9111b61/XL/RAB_20160819_0148-XL.jpg
   alt: C-130s on the Runway
   caption: "View from my office"
 
 ---
-
-I've been working on airplanes for nearly ten years now, and programming in earnest for the past year. These
-two industries, though obviously entirely different, have a few things to learn from each other.
 
 ## My background as a mechanic
 
@@ -31,8 +30,7 @@ flight controls and kill everyone on board, *you don't lose screws*.
 
 ## Going to Fly
 
-<!-- ![Formation Takeoff](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-C86j5bf/0/69996de3/XL/RAB_20160826_0496-XL.jpg) -->
-{% picture portrait.jpg %}
+![Formation Takeoff](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-C86j5bf/0/69996de3/XL/RAB_20160826_0496-XL.jpg)
 
 After 3 years as a mechanic, I cross-trained to become a Flight Engineer on the same airplanes I'd
 been maintaining. What's a Flight Engineer? That's a great question, and not entirely simple to
@@ -59,7 +57,6 @@ doesn't last long in that world.
 ## So how does this relate to programming?
 
 ![Herc over the ocean](https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-9BXjpgm/0/fd89842e/XL/RAB_20160826_0643-XL.jpg)
-<!-- {% picture https://photos.smugmug.com/Fly/Sentry-Aloha-2016/i-9BXjpgm/0/fd89842e/XL/RAB_20160826_0643-XL.jpg %} -->
 
 On the surface, they're clearly entirely unrelated, but the more you dig the more similarities
 appear. Take the C-130 electrical system for example: It's composed of 4 AC and 2 DC buses,
