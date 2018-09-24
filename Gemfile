@@ -9,7 +9,6 @@ group :jekyll_plugins do
   # Utility for dynamically inlining svg images
   gem 'jekyll-inline-svg', '~>0.0.1'
   # gem 'jekyll-picture-tag', path: '/home/rbuchberger/development/jekyll-picture-tag'
-  gem 'jekyll-picture-tag', git: 'https://github.com/rbuchberger/jekyll-picture-tag.git'
-  # gem 'jekyll_icon_list', path: '/home/rbuchberger/development/jekyll_icon_list/'
-  gem 'jekyll_icon_list', git: 'https://github.com/rbuchberger/jekyll_icon_list.git'
+  # gem 'jekyll-picture-tag', git: 'https://github.com/rbuchberger/jekyll-picture-tag.git'
+  gem 'jekyll_icon_list'
 end
