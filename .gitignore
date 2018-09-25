@@ -2,3 +2,5 @@ _site/
 .sass-cache/
 Gemfile.lock
 .jekyll-metadata
+images/source_files/
+images/generated/
