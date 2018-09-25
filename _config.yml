@@ -1,6 +1,7 @@
 plugins:
   - jekyll-inline-svg 
   - jekyll_icon_list
+  - jekyll-picture-tag
 
 defaults:
   -
@@ -25,7 +26,7 @@ icon_list:
     svg: overflow="visible" class="icon"
 
 picture:
-  source: images
+  source: images/_source_files
   output: images/generated
   markup: picture
   strip_metadata: false

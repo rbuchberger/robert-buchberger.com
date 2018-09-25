@@ -3,7 +3,8 @@ layout: default
 ---
 <article>
   <header>
-    <img class="circle-portrait" src="images/portrait.jpg" alt="Portrait of Robert">
+    {% comment %} <img class="circle-portrait" src="images/portrait.jpg" alt="Portrait of Robert"> {% endcomment %}
+    {% picture /portrait.jpg class="circle-portrait" alt="Robert" %}
     <h1>Robert Buchberger</h1>
   </header>
   <section>
