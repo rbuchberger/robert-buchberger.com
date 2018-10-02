@@ -28,18 +28,15 @@ icon_list:
 picture:
   source: images/_source_files
   output: images/generated
-  markup: picture
+  markup: img
   strip_metadata: false
   presets:
     # Full width pictures
     default:
-      ppi: [1, 1.5]
-      attr:
-        class: blog-full
-        itemprop: image
+      ppi: [1]
       source_lrg:
         media: "(min-width: 40em)"
-        width: 700
+        width: 830
       source_med:
         media: "(min-width: 30em)"
         width: 450
@@ -49,9 +46,6 @@ picture:
     # Half width pictures
     half:
       ppi: [1, 1.5]
-      attr:
-        data-location: "{{location}}"
-        data-active: nil
       source_lrg:
         media: "(min-width: 40em)"
         width: 400

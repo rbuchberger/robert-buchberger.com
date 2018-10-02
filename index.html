@@ -3,8 +3,7 @@ layout: default
 ---
 <article>
   <header>
-    {% comment %} <img class="circle-portrait" src="images/portrait.jpg" alt="Portrait of Robert"> {% endcomment %}
-    {% picture /portrait.jpg class="circle-portrait" alt="Robert" %}
+    {% picture half /portrait.jpg class="circle-portrait" alt="Robert" %}
     <h1>Robert Buchberger</h1>
   </header>
   <section>
@@ -18,7 +17,6 @@ layout: default
         {% svg /images/mail.svg overflow="visible" class="icon-big icon icon-color" title="Send e-mail"%}</a>
       <a href="https://github.com/rbuchberger">
         {% svg /images/logos/github-mark.svg overflow="visible" class="icon-big icon-color icon" title="View Github Profile"%}</a>
-      {% comment %} <a href="#">{% svg /images/logos/stackoverflow-logo.svg class="icon-big icon" %}</a> {% endcomment %}
     </nav>
   </section>
 </article>
