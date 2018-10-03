@@ -33,7 +33,7 @@ ul.project-showcase {
     padding-left: 2em;
   }
 
-  picture {
+  .showcase-image {
     width: 100%;
     height: 100%; // For some reason chrome stretches images vertically if you don't set this. Firefox doesn't care.
     margin-bottom: 0em;
@@ -42,11 +42,9 @@ ul.project-showcase {
     border-bottom: none;
   }
 
-  img {
-    width: 100%;
-    height: 100%;
+  .showcase-image-anchor {
+    width: 100%
   }
-
 }
 
 @media(max-width: 670px) {

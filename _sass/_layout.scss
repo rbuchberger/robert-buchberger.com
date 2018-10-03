@@ -116,7 +116,7 @@ section > header {
   text-align: justify;
 }
 
-ul.strengths {
+ul.strong-description {
   li {
     display: flex;
   }
@@ -127,7 +127,7 @@ ul.strengths {
     flex-shrink: 0;
   }
 
-  div {
+  p {
     flex-grow: 1;
     padding-left: .8em;
     border-left: 1px solid var(--accent-color);
@@ -168,19 +168,19 @@ ul.strengths {
     display: none !important;
   }
 
-  ul.strengths li {
+  ul.strong-description li {
     flex-direction: column;
   }
 }
 
 @media (min-width: 650px) {
-  ul.strengths {
+  ul.strong-description {
     strong {
       flex-basis: 150px;
       text-align: right;
     }
 
-    div {
+    p {
       flex-basis: 400px;
     }
   }

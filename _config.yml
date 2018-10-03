@@ -33,16 +33,13 @@ picture:
   presets:
     # Full width pictures
     default:
-      ppi: [1]
+      ppi: [1, 2]
       source_lrg:
-        media: "(min-width: 40em)"
-        width: 830
+        width: 900
       source_med:
-        media: "(min-width: 30em)"
         width: 450
       source_default:
-        width: 350
-        height: 200
+        width: 830
     # Half width pictures
     half:
       ppi: [1, 1.5]
