@@ -1,0 +1,2 @@
+#!/bin/bash
+aws s3 sync ./images/_source_files s3://robert-buchberger.com/images/source_files
