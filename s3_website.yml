@@ -3,12 +3,19 @@ s3_bucket: robert-buchberger.com
 index_document: index.html
 error_document: error.html
 
+
+max_age:
+  "assets/*": 6000
+  "*": 900
+
 gzip: true
 gzip:
   - .html
   - .css
   - .md
   - .js
+
+ignore_on_server: images/_source_files/
 
 cloudfront_distribution_id: E1JRTPAZMUH86G
 
