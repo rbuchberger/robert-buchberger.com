@@ -15,6 +15,12 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:year/:title:output_ext
+  -
+    scope:
+      path: _drafts
+    values:
+      layout: "post"
+      permalink: /blog/:year/:title:output_ext
 
 svg:
   optimize: true
