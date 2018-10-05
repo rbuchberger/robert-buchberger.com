@@ -26,7 +26,7 @@ javascript:
   icon: javascript-logo.svg
   label: Javascript
 jekyll:
-  icon: jekyll-logo.svg
+  icon: jekyll.svg
   label: Jekyll
 linux:
   icon: tux.svg
