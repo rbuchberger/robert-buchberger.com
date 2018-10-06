@@ -15,7 +15,7 @@ gzip:
   - .md
   - .js
 
-ignore_on_server: images/_source_files/
+ignore_on_server: /images/_source_files/*
 
 cloudfront_distribution_id: E1JRTPAZMUH86G
 
