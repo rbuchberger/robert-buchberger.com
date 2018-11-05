@@ -13,6 +13,8 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44852849-2"></script>
+    <script src="/js/swup.min.js"></script>
+    <script defer src="/js/script.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -26,12 +28,11 @@
     <header>
       {% include site_header.html %}
     </header>
-    <main>
+    <main id="swup" class="transition-fade">
       {{ content }}
     </main>
     <footer>
       {% include site_footer.html %}
     </footer>
-    <script src="/js/script.js"></script>
   </body>
 </html>
