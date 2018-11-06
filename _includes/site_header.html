@@ -1,9 +1,10 @@
 <nav class="main">
   <button class="hamburger hidden">Menu {% svg /images/menu.svg class="icon" %}</button>
+  <div class="navbar-tab"></div>
   <ul>
-    <li {% if page.url == "/" %}class="active"{% endif %}><a href="/">Home</a></li>
-    <li {% if page.url contains "blog" %}class="active"{% endif %}><a href="/blog.html">Blog</a></li>
-    <li {% if page.url contains "projects" %}class="active"{% endif %}><a href="/projects.html">Projects</a></li>
-    <li {% if page.url contains "resume" %}class="active"{% endif %}><a href="/resume.html">Resume</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/projects.html">Projects</a></li>
+    <li><a href="/resume.html">Resume</a></li>
   </ul>
 </nav>

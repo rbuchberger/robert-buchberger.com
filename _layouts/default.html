@@ -12,16 +12,16 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44852849-2"></script>
+    {% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44852849-2"></script> {% endcomment %}
     <script src="/js/swup.min.js"></script>
     <script defer src="/js/script.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    {% comment %} <script> {% endcomment %}
+    {% comment %}   window.dataLayer = window.dataLayer || []; {% endcomment %}
+    {% comment %}   function gtag(){dataLayer.push(arguments);} {% endcomment %}
+    {% comment %}   gtag('js', new Date()); {% endcomment %}
 
-      gtag('config', 'UA-44852849-2');
-    </script>
+    {% comment %}   gtag('config', 'UA-44852849-2'); {% endcomment %}
+    {% comment %} </script> {% endcomment %}
 
   </head>
   <body>
