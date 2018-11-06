@@ -89,6 +89,21 @@ nav.main {
     padding: 0;
     margin: 0;
     line-height: 2;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+
+    &:hover {
+      color: var(--background-color);
+    }
+
+    svg path {
+      fill: var(--background-color);
+    }
+  }
+
+  button.hamburger.active {
+    background-color: var(--background-color);
+    color: var(--accent-color);
 
     svg path {
       fill: var(--accent-color);
@@ -99,8 +114,10 @@ nav.main {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s;
+    padding-bottom: 10px;
 
     ul {
+      padding-top: 12px;
       flex-direction: column;
       align-items: center;
     }

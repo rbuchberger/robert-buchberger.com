@@ -5,16 +5,21 @@ const navMenuList = document.querySelector('nav.main ul');
 const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
 
-function toggleMenu() {
-  navMenu.classList.toggle('open');
-  navUpdate();
-}
-
 menuButton.addEventListener('click', toggleMenu);
 
-// Progressive enhancement: Show the nav menu and hide the button by default, switch them o ut once we know javascript works. 
-navMenu.classList.add('hidden-mobile');
-menuButton.classList.remove('hidden-mobile');
+function toggleMenu() {
+  navMenu.classList.toggle('open');
+  menuButton.classList.toggle('active');
+  // navUpdate();
+}
+
+function closeMenu() {
+  window.setTimeout(() => {
+    navMenu.classList.remove('open');
+    menuButton.classList.remove('active');
+  }, 300);
+}
+
 
 // Enable swup
 const options = {
@@ -52,6 +57,7 @@ function navUpdate() {
       item.classList.remove('active');
     }
   });
+  closeMenu();
 }
 
 function updateHighlightPosition(target) {
