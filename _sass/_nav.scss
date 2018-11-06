@@ -1,6 +1,16 @@
 // navbar
 
 nav.main {
+  position: relative;
+
+  div.navbar-tab {
+    background-color: var(--accent-color);
+    position: absolute;
+    z-index: -10;
+    transition: .5s;
+    box-shadow: 4px 3px 7px #0002;
+  }
+
   ul {
     display: flex;
     list-style: none;
@@ -19,9 +29,7 @@ nav.main {
 
   button.active, li.active {
     color: var(--background-color);
-    box-shadow: 4px 3px 7px #0002;
-    background-color: var(--accent-color);
-    transition: .4s;
+    transition: .6s;
 
     svg path {
       fill: var(--background-color);
@@ -56,22 +64,18 @@ nav.main {
       justify-content: end;
     }
 
-    // li {
-    // margin: 0 1em;
-    // }
-
     a {
       padding: 0 1em;
-    }
-
-    button.hamburger {
-      display: none;
     }
 
     // Move first item (homepage link) to the left
     li:first-child {
       margin-right: auto;
     }
+  }
+
+  button.hamburger {
+    display: none;
   }
 }
 
@@ -92,6 +96,10 @@ nav.main {
   }
 
   nav.main {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+
     ul {
       flex-direction: column;
       align-items: center;
@@ -115,6 +123,10 @@ nav.main {
   svg {
     padding: 0 .5em;
   }
+}
+
+nav.main.open {
+  max-height: 1000px;
 }
 
 nav.social-media {
