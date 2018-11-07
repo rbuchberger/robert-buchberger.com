@@ -4,8 +4,17 @@ const navMenu = document.querySelector('nav.main');
 const navMenuList = document.querySelector('nav.main ul');
 const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
+const metaThemeColor = document.querySelector('#theme-color');
 
-menuButton.addEventListener('click', toggleMenu);
+// Set theme color on page load.
+document.addEventListener('DOMContentLoaded', setThemeColor);
+function setThemeColor() {
+  const themeColor = window.getComputedStyle(document.documentElement)
+    .getPropertyValue('--accent-color');
+
+  metaThemeColor.setAttribute('content', themeColor);
+}
+
 
 // swup:pageView triggers on page loaded by swup, DOMContentLoaded triggers when
 // loading page the first time or on refresh.
@@ -35,6 +44,7 @@ function enableHighlightTransition() {
   navTab.classList.add('slide-transition');
 }
 
+menuButton.addEventListener('click', toggleMenu);
 function toggleMenu() {
   navMenu.classList.toggle('open');
   menuButton.classList.toggle('active');
