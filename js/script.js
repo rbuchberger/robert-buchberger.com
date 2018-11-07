@@ -15,7 +15,9 @@ window.addEventListener('resize', resizeThrottled);
 let throttled;
 
 function resizeThrottled() {
+  console.log('throttle called');
   if (throttled) return;
+  console.log('throttle executed');
 
   instantNavUpdate();
 
@@ -108,5 +110,6 @@ function updateHighlightPosition(target) {
 // Given 'blog.html', return 'blog', given '/', return '', given
 // '/blog/2018/aviation-and-programming.html' return 'blog'
 function getBasePath(url) {
-  return url.match(/^\/?(\w*)[/.]?/g).pop();
+  const regex = /^\/?(\w*)[/.]?/;
+  return regex.exec(url)[1];
 }
