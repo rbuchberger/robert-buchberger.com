@@ -3,13 +3,16 @@
 <article>
   <header>
     <h1>Projects</h1>
-    <p class="text-center muted">
-      Not that it's saying much, but I learned it all on my own.
+    <p class="skinny-center-justified">
+      As a Flight Engineer, I learned to manage my own time, maintain my own
+      knowledge of ever-changing regulations and procedures, and to self-impose
+      a habit pattern of best-practices. Those skills have carried over nicely
+      to the programming world.
     </p>
   </header>
   <section>
     <header>
-      <h2>Real World</h2>
+      <h2>Websites</h2>
     </header>
 
     <ul class="project-showcase">
@@ -33,6 +36,49 @@
         </div>
       </li>
 
+      <li>
+        {% picture projects/screenshot-LiSEC-Tech.png class="showcase-image" alt="Screenshot of LiSEC-Tech.com" %}
+        <div class="name">
+          <a href="http://lisec-tech.com">LiSEC-tech.com</a>
+          <a href="https://github.com/rbuchberger/lisec-tech.com">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+          </a>
+        </div>
+        <div class="description">
+          {% icon_list jekyll aws %}
+          <p class="muted">
+            This is a recruitment, blog, and project site for a university research grant. I used a
+            static site generator, customized a pre-made theme 
+            (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>),
+            and dropped it in an S3 bucket.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div class="name">
+          <a href="http://robert-buchberger.com">robert-buchberger.com</a>
+          <a href="https://github.com/rbuchberger/robert-buchberger.com">
+            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+          </a>
+        </div>
+        <div class="description">
+          {% icon_list jekyll aws %}
+          <p class="muted">
+            You're Looking at it! This is also a static site in a bucket, but I wrote all the HTML
+            and CSS from scratch (taking design inspiration from the 
+            <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <header>
+      <h2>Libraries</h2>
+    </header>
+    <ul class="project-showcase">
       <li>
         <div class="name">
           <a href="https://rubygems.org/gems/objective_elements">Objective Elements</a>
@@ -66,44 +112,9 @@
         </div>
       </li>
 
-      <li>
-        {% picture projects/screenshot-LiSEC-Tech.png class="showcase-image" alt="Screenshot of LiSEC-Tech.com" %}
-        <div class="name">
-          <a href="http://lisec-tech.com">LiSEC-tech.com</a>
-          <a href="https://github.com/rbuchberger/lisec-tech.com">
-            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
-          </a>
-        </div>
-        <div class="description">
-          {% icon_list jekyll aws %}
-          <p class="muted">
-            This is a recruitment, blog, and project site for a university research grant. I used a
-            static site generator, customized a pre-made theme 
-            (<a href="https://github.com/iwiedenm/jekyll-theme-massively-src">Massively</a>),
-            and dropped it in an S3 bucket.
-          </p>
-        </div>
-      </li>
-
-      <li>
-        {% picture projects/screenshot-rb-com.png class="showcase-image" alt="Screenshot of this website" %}
-        <div class="name">
-          <a href="http://robert-buchberger.com">robert-buchberger.com</a>
-          <a href="https://github.com/rbuchberger/robert-buchberger.com">
-            {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
-          </a>
-        </div>
-        <div class="description">
-          {% icon_list jekyll aws %}
-          <p class="muted">
-            You're Looking at it! This is also a static site in a bucket, but I wrote all the HTML
-            and CSS from scratch (taking design inspiration from the 
-            <a href="https://github.com/jekyller/sustain">sustain</a> theme.)
-          </p>
-        </div>
-      </li>
     </ul>
   </section>
+
 
   <section>
 
