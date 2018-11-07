@@ -7,10 +7,37 @@ const navTab = document.querySelector('div.navbar-tab');
 
 menuButton.addEventListener('click', toggleMenu);
 
+// swup:pageView triggers on page loaded by swup, DOMContentLoaded triggers when
+// loading page the first time or on refresh.
+['DOMContentLoaded', 'swup:pageView', 'transitionend'].forEach(event => {
+  document.addEventListener(event, navUpdate);
+});
+
+
+window.addEventListener('resize', resizeDebounced);
+let timeout;
+
+function resizeDebounced() {
+  window.clearTimeout(timeout);
+
+  timeout = window.setTimeout(instantNavUpdate, 100);
+}
+
+// Position highlight div, without transition effects.
+// We have to delay adding the transition class back.
+function instantNavUpdate() {
+  navTab.classList.remove('slide-transition');
+  navUpdate();
+  timeout = window.setTimeout(enableHighlightTransition, 500);
+}
+
+function enableHighlightTransition() {
+  navTab.classList.add('slide-transition');
+}
+
 function toggleMenu() {
   navMenu.classList.toggle('open');
   menuButton.classList.toggle('active');
-  // navUpdate();
 }
 
 function closeMenu() {
@@ -28,14 +55,6 @@ const options = {
 
 const swup = new Swup(options);
 
-// swup:pageView triggers on page loaded by swup, DOMContentLoaded triggers when
-// loading page the first time or on refresh.
-['DOMContentLoaded', 'swup:pageView'].forEach(event => {
-  document.addEventListener(event, navUpdate);
-});
-
-// Handles the scrollbar pop in & out, and obviously window resizing.
-window.addEventListener('resize', navUpdate);
 
 function navUpdate() {
   // Get current location (i.e. blog, home, or root)

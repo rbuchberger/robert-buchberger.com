@@ -7,8 +7,12 @@ nav.main {
     background-color: var(--accent-color);
     position: absolute;
     z-index: -10;
-    transition: .4s;
     box-shadow: 4px 3px 7px #0002;
+  }
+
+  .slide-transition {
+    transition-property: top, left;
+    transition-duration: .6s;
   }
 
   ul {
