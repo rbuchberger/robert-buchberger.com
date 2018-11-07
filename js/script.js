@@ -7,26 +7,33 @@ const navTab = document.querySelector('div.navbar-tab');
 
 // swup:pageView triggers on page loaded by swup, DOMContentLoaded triggers when
 // loading page the first time or on refresh.
-['DOMContentLoaded', 'swup:pageView', 'transitionend'].forEach(event => {
+['DOMContentLoaded', 'swup:pageView'].forEach(event => {
   document.addEventListener(event, navUpdate);
 });
 
+window.addEventListener('resize', resizeThrottled);
+let throttled;
 
-window.addEventListener('resize', resizeDebounced);
-let timeout;
+function resizeThrottled() {
+  if (throttled) return;
 
-function resizeDebounced() {
-  window.clearTimeout(timeout);
+  instantNavUpdate();
 
-  timeout = window.setTimeout(instantNavUpdate, 100);
+  throttled = true;
+  setTimeout(() => {
+    throttled = false;
+    // If another resize happens while throttled, it'll end up in the wrong
+    // place. This fixes that:
+    instantNavUpdate();
+  }, 100);
 }
 
 // Position highlight div, without transition effects.
-// We have to delay adding the transition class back.
 function instantNavUpdate() {
   navTab.classList.remove('slide-transition');
   navUpdate();
-  timeout = window.setTimeout(enableHighlightTransition, 500);
+  // Wait to enable transitions till we're sure it's in the right place:
+  window.setTimeout(enableHighlightTransition, 100);
 }
 
 function enableHighlightTransition() {
@@ -34,6 +41,7 @@ function enableHighlightTransition() {
 }
 
 menuButton.addEventListener('click', toggleMenu);
+
 function toggleMenu() {
   navMenu.classList.toggle('open');
   menuButton.classList.toggle('active');
@@ -43,7 +51,7 @@ function closeMenu() {
   window.setTimeout(() => {
     navMenu.classList.remove('open');
     menuButton.classList.remove('active');
-  }, 300);
+  }, 500);
 }
 
 
@@ -52,21 +60,23 @@ const options = {
   // debugMode: true
 };
 
-const swup = new Swup(options);
-
+new Swup(options);
 
 function navUpdate() {
   // Get current location (i.e. blog, home, or root)
   const location = getBasePath(window.location.pathname);
+
   // Grab all nav items
   const navItems = Array.from(navMenuList.children);
+
   // Grab appropriate nav item
   const activeItem = navItems.find(item => {
     return getBasePath(item.firstChild.attributes.href.value) === location;
   });
-  const targetPosition = activeItem.getBoundingClientRect();
+
   // Position Div
-  updateHighlightPosition(targetPosition);
+  updateHighlightPosition(activeItem.getBoundingClientRect());
+
   // Style nav items
   navItems.forEach(item => {
     if (item === activeItem) {
@@ -75,6 +85,8 @@ function navUpdate() {
       item.classList.remove('active');
     }
   });
+
+  // Close the mobile drawer
   closeMenu();
 }
 
@@ -96,5 +108,5 @@ function updateHighlightPosition(target) {
 // Given 'blog.html', return 'blog', given '/', return '', given
 // '/blog/2018/aviation-and-programming.html' return 'blog'
 function getBasePath(url) {
-  return url.split(/[\/.]/)[1];
+  return url.match(/^\/?(\w*)[/.]?/g).pop();
 }

@@ -3,6 +3,9 @@
 nav.main {
   position: relative;
 
+  // Fixes scrollbar flash when resizing window smaller
+  overflow: hidden;
+
   div.navbar-tab {
     background-color: var(--accent-color);
     position: absolute;
