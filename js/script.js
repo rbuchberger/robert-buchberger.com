@@ -15,9 +15,7 @@ window.addEventListener('resize', resizeThrottled);
 let throttled;
 
 function resizeThrottled() {
-  console.log('throttle called');
   if (throttled) return;
-  console.log('throttle executed');
 
   instantNavUpdate();
 
