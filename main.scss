@@ -46,11 +46,9 @@
   }
 }
 
-// Navbar div
-
-// Animations
+// Page load transition
 .transition-fade {
-  transition: .1s;
+  transition: opacity 80ms;
   opacity: 1;
 }
 

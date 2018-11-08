@@ -6,6 +6,7 @@ nav.main {
   // Fixes scrollbar flash when resizing window smaller
   overflow: hidden;
 
+  // This is the little highlight puppy
   div.navbar-tab {
     background-color: var(--accent-color);
     position: absolute;
@@ -16,6 +17,7 @@ nav.main {
   .slide-transition {
     transition-property: top, left;
     transition-duration: .6s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   ul {
@@ -36,9 +38,6 @@ nav.main {
 
    .active {
     color: var(--background-color);
-    // background-color: var(--accent-color);
-    // transition-property: background-color;
-    // transition-delay: 1s;
 
     svg path {
       fill: var(--background-color);
@@ -57,8 +56,6 @@ nav.main {
   a {
     color: inherit;
     background-color: inherit;
-    // transition-property: background-color;
-    // transition-delay: 1s;
 
     &:hover {
       color: inherit;
