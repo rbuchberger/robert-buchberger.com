@@ -60,7 +60,7 @@ picture:
         height: 250
 
 css:
-  accent-color: '#3c825e'
+  accent-color: '#9C3107'
   accent-hover-color: '#825e3c'
   background-color: '#FAFAFA'
   foreground-color: '#464646'

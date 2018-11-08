@@ -34,16 +34,18 @@ nav.main {
     color: var(--foreground-color);
   }
 
-  button.active, li.active {
+   .active {
     color: var(--background-color);
-    transition: .6s;
+    // background-color: var(--accent-color);
+    // transition-property: background-color;
+    // transition-delay: 1s;
 
     svg path {
       fill: var(--background-color);
     }
 
     &:hover {
-      box-shadow: 4px 3px 7px #0004;
+      text-shadow: 4px 3px 7px #0004;
       transition: .4s;
     }
   }
@@ -54,6 +56,9 @@ nav.main {
 
   a {
     color: inherit;
+    background-color: inherit;
+    // transition-property: background-color;
+    // transition-delay: 1s;
 
     &:hover {
       color: inherit;
