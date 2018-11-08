@@ -11,7 +11,16 @@ const navTab = document.querySelector('div.navbar-tab');
   document.addEventListener(event, navUpdate);
 });
 
+document.addEventListener('swup:clickLink', closeMenu);
+menuButton.addEventListener('click', toggleMenu);
 window.addEventListener('resize', resizeThrottled);
+// Enable swup
+const options = {
+  // debugMode: true
+};
+
+new Swup(options);
+
 let throttled;
 
 function resizeThrottled() {
@@ -40,8 +49,6 @@ function enableHighlightTransition() {
   navTab.classList.add('slide-transition');
 }
 
-menuButton.addEventListener('click', toggleMenu);
-
 function toggleMenu() {
   navMenu.classList.toggle('open');
   menuButton.classList.toggle('active');
@@ -53,14 +60,6 @@ function closeMenu() {
     menuButton.classList.remove('active');
   }, 500);
 }
-
-
-// Enable swup
-const options = {
-  // debugMode: true
-};
-
-new Swup(options);
 
 function navUpdate() {
   // Get current location (i.e. blog, home, or root)
@@ -85,9 +84,6 @@ function navUpdate() {
       item.classList.remove('active');
     }
   });
-
-  // Close the mobile drawer
-  closeMenu();
 }
 
 function updateHighlightPosition(target) {
