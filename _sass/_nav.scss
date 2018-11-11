@@ -1,24 +1,27 @@
 // navbar
 
-// This is the little highlight puppy
-
 body header {
   overflow: hidden;
 }
+
 nav.main {
-
   position: relative;
-  // // Fixes scrollbar flash when resizing window smaller
-  // overflow: hidden;
 
+  // This is the moving highlight:
   div.navbar-tab {
     background-color: var(--accent-color);
     position: absolute;
     z-index: 10;
-    box-shadow: 4px 3px 7px #0002;
-    width: 10px;
-    height: 10px;
+    box-shadow: 2px 1px 6px #0006;
+
+    // Approximately the correct size; scaling affects the box shadow.
+    width: 80px;
+    height: 20px;
     transform-origin: 0 0;
+
+    // Initialize it off the screen, position with javascript once loaded:
+    left: -100px;
+    top: -100px;
   }
 
   .slide-transition {
@@ -74,7 +77,7 @@ nav.main {
 // Desktop styles:
 @media (min-width: 600px) {
   nav.main {
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
 
     ul {
       flex-direction: row;
@@ -131,12 +134,12 @@ nav.main {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s;
-    padding-bottom: 10px;
 
     ul {
-      padding-top: 12px;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 1em;
+      padding-top: 1em;
     }
 
     a {
