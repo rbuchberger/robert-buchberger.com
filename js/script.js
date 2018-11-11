@@ -4,16 +4,31 @@ const navMenu = document.querySelector('nav.main');
 const navMenuList = document.querySelector('nav.main ul');
 const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
+const navTabBasePosition = navTab.getBoundingClientRect();
 
-// swup:pageView triggers on page loaded by swup, DOMContentLoaded triggers when
-// loading page the first time or on refresh.
-['DOMContentLoaded', 'swup:pageView'].forEach(event => {
-  document.addEventListener(event, navUpdate);
-});
+// DOMContentLoaded triggers when loading page the first time or on refresh.
 
+document.addEventListener('DOMContentLoaded', instantNavUpdate);
+
+// swup:willReplaceContent triggers when a link is clicked. This allows the
+// animation to start instantly, rather than waiting for new content to
+// download.
+document.addEventListener('swup:clickLink', navUpdate);
+
+// swup:pageView triggers when content is displayed. Triggering a second time
+// accounts for scroll bar appearing or disappearing on page load. Without this
+// call, highlight ends up in the wrong place if the scrollbar is added or removed
+// between pages.
+document.addEventListener('swup:pageView', navUpdate);
+
+// We need to reposition the highlight when the window is resized.
+window.addEventListener('resize', resizeThrottled);
+
+// Close the nav menu when a link is selected.
 document.addEventListener('swup:clickLink', closeMenu);
 menuButton.addEventListener('click', toggleMenu);
-window.addEventListener('resize', resizeThrottled);
+
+// Only show the navTab if 
 // Enable swup
 const options = {
   // debugMode: true
@@ -61,16 +76,24 @@ function closeMenu() {
   }, 500);
 }
 
-function navUpdate() {
+function navUpdate(e) {
   // Get current location (i.e. blog, home, or root)
-  const location = getBasePath(window.location.pathname);
+  // Event is optional. If passed, and if its target element has an href, use
+  // that as the target. Otherwise use current location.
+  const targetPath = getBasePath(new URL(
+    e && e.currentTarget.activeElement.href ?
+      e.currentTarget.activeElement.href :
+      window.location.href
+  ).pathname);
+
 
   // Grab all nav items
   const navItems = Array.from(navMenuList.children);
 
   // Grab appropriate nav item
   const activeItem = navItems.find(item => {
-    return getBasePath(item.firstChild.attributes.href.value) === location;
+    return getBasePath(item.firstChild.attributes.href.value) ===
+      targetPath;
   });
 
   // Position Div
@@ -86,18 +109,24 @@ function navUpdate() {
   });
 }
 
-function updateHighlightPosition(target) {
-  // Parent element is positioned relative, so we have to account for its
-  // height.
-  const offsetHeight = navMenu.getBoundingClientRect().top;
+function Transformation(targetPosition) {
+  const navMenuPosition = navMenu.getBoundingClientRect();
+  this.scaleX = targetPosition.width / navTabBasePosition.width;
+  this.scaleY = targetPosition.height / navTabBasePosition.height;
+  // offsetTop returns the root (untransformed) position.
+  this.translateY = (targetPosition.top - navTab.offsetTop - navMenuPosition.top) /
+    this.scaleY;
+  this.translateX = (targetPosition.left - navTab.offsetLeft -
+    navMenuPosition.left) / this.scaleX;
+}
 
-  // Size background div
-  navTab.style.height = `${target.height}px`;
-  navTab.style.width = `${target.width}px`;
+function updateHighlightPosition(targetPosition) {
+  const trans = new Transformation(targetPosition);
 
-  // Position background div
-  navTab.style.top = `${target.top - offsetHeight}px`;
-  navTab.style.left = `${target.left}px`;
+  const property =
+    `scale(${trans.scaleX}, ${trans.scaleY}) translate(${trans.translateX}px, ${trans.translateY}px)`;
+  // `translate(${trans.translateX}px, ${trans.translateY}px)`;
+  navTab.style.transform = property;
 }
 
 // Given a relative pathname, determine site base position. Example:
