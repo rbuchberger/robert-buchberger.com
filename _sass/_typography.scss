@@ -88,6 +88,7 @@ p:not(:last-child) {
 a, button {
   color: var(--accent-color);
   text-decoration: none;
+  transition-property: color;
   transition-duration: 0.4s;
 
   &:hover {
