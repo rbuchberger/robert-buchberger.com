@@ -3,13 +3,14 @@
 body header {
   overflow: hidden;
 
-  a:focus, button:focus{
+  a:focus, button:focus {
     outline: 1px solid var(--light-text-color);
   }
 }
 
 nav.main {
   position: relative;
+
   // This is the moving highlight:
   div.navbar-tab {
     background-color: var(--accent-color);
@@ -59,7 +60,9 @@ nav.main {
 
     &:hover {
       text-shadow: 4px 3px 7px #0004;
+
       // transition: .4s;
+   
     }
   }
 
@@ -110,72 +113,94 @@ nav.main {
     border-radius: 50%;
     text-align: center;
     line-height: 0;
-    width: 3em;
-    height: 3em;
-    font-size: 1.2em;
+    width: 50px;
+    height: 50px;
     z-index: 20;
-
+    box-shadow: 3px 3px 20px #00000080;
     position: fixed;
-    right: 1vw;
-    bottom: 9vh;
+    right: 20px;
+    bottom: 60px;
+    font-size: 0;
+    overflow: hidden;
 
-    &:hover {
-      color: var(--background-color);
-    }
-
-    svg {
-      margin: auto;
-    }
-
-    svg path {
-      fill: var(--background-color);
-    }
-  }
-
-  button.hamburger.active {
-  }
-
-  nav.main {
-    // overflow: hidden;
-    transition: transform .3s;
-    transform-origin: right bottom;
-    transform: scale(0);
-    background-color: var(--background-color);
-    position: fixed;
-    right: 10vw;
-    left: 10vw;
-    bottom: 14vh;
-    border: 1px solid var(--accent-color);
-
-    z-index: 10;
-
-    ul {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    a {
+    span {
+      font-size: 0;
+      position: absolute;
+      height: 1px;
+      width: 30px;
       display: block;
-      width: 100%;
-      text-align: center;
-      font-size: 1.3em;
-    }
+      background-color: var(--background-color);
+      transform-origin: left;
 
-    li {
-      width: 100%;
-      padding: .4em 0;
+      transition-property: transform;
+      transition-duration: 150ms;
+    }
+    :nth-child(1) {
+      top: 15px;
+      right: 10px;
+    }
+    :nth-child(2) {
+      top: 25px;
+      right: 10px;
+    }
+    :nth-child(3) {
+      top: 35px;
+      right: 10px;
     }
   }
 }
 
-.hamburger {
-  svg {
-    padding: 0 .5em;
+button.hamburger.active {
+  // If I had better math available in CSS, I wouldn't have to hardcode these
+  // values
+  :nth-child(1) {
+    transform: rotate(33.7deg) scaleX(1.2);
+  }
+  :nth-child(2) {
+    transform: translateX(-100px);
+  }
+  :nth-child(3) {
+    transform: rotate(-33.7deg) scaleX(1.2);
+  }
+}
+
+nav.main {
+  overflow: hidden;
+  transition: transform 150ms;
+  transform-origin: right bottom;
+  transform: scale(0);
+  background-color: var(--background-color);
+  position: fixed;
+  right: 45px;
+  left: 45px;
+  bottom: 85px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 3px 3px 15px #0009;
+
+  // Fixes disappearing border on chrome
+  margin: 1px;
+  z-index: 10;
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  li {
+    width: 100%;
+    margin: .4em 0;
   }
 }
 
 nav.main.open {
-  transform: scaleX(1);
+  transform: scale(1);
 }
 
 nav.social-media {
