@@ -2,11 +2,14 @@
 
 body header {
   overflow: hidden;
+
+  a:focus, button:focus{
+    outline: 1px solid var(--light-text-color);
+  }
 }
 
 nav.main {
   position: relative;
-
   // This is the moving highlight:
   div.navbar-tab {
     background-color: var(--accent-color);
@@ -26,7 +29,7 @@ nav.main {
 
   .slide-transition {
     transition-property: transform;
-    transition-duration: 200ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
 
@@ -56,7 +59,7 @@ nav.main {
 
     &:hover {
       text-shadow: 4px 3px 7px #0004;
-      transition: .4s;
+      // transition: .4s;
     }
   }
 
@@ -102,18 +105,26 @@ nav.main {
 // Mobile styles
 @media (max-width: 600px) {
   button.hamburger {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    line-height: 2;
     background-color: var(--accent-color);
     color: var(--background-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0;
+    width: 3em;
+    height: 3em;
+    font-size: 1.2em;
+    z-index: 20;
+
+    position: fixed;
+    right: 1vw;
+    bottom: 9vh;
 
     &:hover {
       color: var(--background-color);
+    }
+
+    svg {
+      margin: auto;
     }
 
     svg path {
@@ -122,36 +133,37 @@ nav.main {
   }
 
   button.hamburger.active {
-    background-color: var(--background-color);
-    color: var(--accent-color);
-
-    svg path {
-      fill: var(--accent-color);
-    }
   }
 
   nav.main {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s;
+    // overflow: hidden;
+    transition: transform .3s;
+    transform-origin: right bottom;
+    transform: scale(0);
+    background-color: var(--background-color);
+    position: fixed;
+    right: 10vw;
+    left: 10vw;
+    bottom: 14vh;
+    border: 1px solid var(--accent-color);
+
+    z-index: 10;
 
     ul {
       flex-direction: column;
       align-items: center;
-      padding-bottom: 1em;
-      padding-top: 1em;
     }
 
     a {
-      padding: 0;
       display: block;
       width: 100%;
       text-align: center;
+      font-size: 1.3em;
     }
 
     li {
       width: 100%;
-      padding: 0;
+      padding: .4em 0;
     }
   }
 }
@@ -163,7 +175,7 @@ nav.main {
 }
 
 nav.main.open {
-  max-height: 1000px;
+  transform: scaleX(1);
 }
 
 nav.social-media {

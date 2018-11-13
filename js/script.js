@@ -4,7 +4,6 @@ const navMenu = document.querySelector('nav.main');
 const navMenuList = document.querySelector('nav.main ul');
 const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
-const navTabBasePosition = navTab.getBoundingClientRect();
 
 // DOMContentLoaded triggers when loading page the first time or on refresh.
 
@@ -57,7 +56,7 @@ function instantNavUpdate() {
   navTab.classList.remove('slide-transition');
   navUpdate();
   // Wait to enable transitions till we're sure it's in the right place:
-  window.setTimeout(enableHighlightTransition, 100);
+  window.setTimeout(enableHighlightTransition, 300);
 }
 
 function enableHighlightTransition() {
@@ -73,7 +72,7 @@ function closeMenu() {
   window.setTimeout(() => {
     navMenu.classList.remove('open');
     menuButton.classList.remove('active');
-  }, 500);
+  }, 300);
 }
 
 function navUpdate(e) {
@@ -96,8 +95,11 @@ function navUpdate(e) {
       targetPath;
   });
 
+  // Set target position of div
+  const targetPosition = findTargetPosition(activeItem);
+
   // Position Div
-  updateHighlightPosition(activeItem.getBoundingClientRect());
+  updateHighlightPosition(targetPosition);
 
   // Style nav items
   navItems.forEach(item => {
@@ -109,20 +111,26 @@ function navUpdate(e) {
   });
 }
 
+function findTargetPosition(activeItem) {
+  return {
+    width: activeItem.offsetWidth,
+    height: activeItem.offsetHeight,
+    top: activeItem.offsetTop + navMenu.offsetTop,
+    left: activeItem.offsetLeft + navMenu.offsetLeft
+  };
+}
+
 function Transformation(targetPosition) {
-  const navMenuPosition = navMenu.getBoundingClientRect();
-  this.scaleX = targetPosition.width / navTabBasePosition.width;
-  this.scaleY = targetPosition.height / navTabBasePosition.height;
-  // offsetTop returns the root (untransformed) position.
-  this.translateY = (targetPosition.top - navTab.offsetTop - navMenuPosition.top) /
-    this.scaleY;
-  this.translateX = (targetPosition.left - navTab.offsetLeft -
-    navMenuPosition.left) / this.scaleX;
+  this.scaleX = targetPosition.width / navTab.offsetWidth;
+  this.scaleY = targetPosition.height / navTab.offsetHeight;
+  this.translateY = 
+    (targetPosition.top - navTab.offsetTop - navMenu.offsetTop) / this.scaleY;
+  this.translateX = 
+    (targetPosition.left - navTab.offsetLeft - navMenu.offsetLeft) / this.scaleX;
 }
 
 function updateHighlightPosition(targetPosition) {
   const trans = new Transformation(targetPosition);
-
   const property =
     `scale(${trans.scaleX}, ${trans.scaleY}) translate(${trans.translateX}px, ${trans.translateY}px)`;
   // `translate(${trans.translateX}px, ${trans.translateY}px)`;
