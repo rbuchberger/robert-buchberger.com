@@ -144,7 +144,7 @@ nav.main {
   button.hamburger.active {
     // If I trig functions in CSS, I wouldn't have to hardcode these values.
     :nth-child(1) {
-      transform: rotate(33.7deg) scaleX(1.2);
+      transform: translateX(4.4px) rotate(45deg);
     }
 
     :nth-child(2) {
@@ -152,7 +152,7 @@ nav.main {
     }
 
     :nth-child(3) {
-      transform: rotate(-33.7deg) scaleX(1.2);
+      transform: translateX(4.4px) rotate(-45deg);
     }
   }
 
