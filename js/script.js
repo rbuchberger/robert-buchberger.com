@@ -6,7 +6,6 @@ const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
 
 // DOMContentLoaded triggers when loading page the first time or on refresh.
-
 document.addEventListener('DOMContentLoaded', instantNavUpdate);
 
 // swup:willReplaceContent triggers when a link is clicked. This allows the
@@ -25,15 +24,12 @@ window.addEventListener('resize', resizeThrottled);
 
 // Close the nav menu when a link is selected.
 document.addEventListener('swup:clickLink', closeMenu);
+
+// Add functionality to the nav menu.
 menuButton.addEventListener('click', toggleMenu);
 
-// Only show the navTab if 
-// Enable swup
-const options = {
-  // debugMode: true
-};
-
-new Swup(options);
+// Enable Swup
+new Swup();
 
 let throttled;
 
@@ -45,6 +41,7 @@ function resizeThrottled() {
   throttled = true;
   setTimeout(() => {
     throttled = false;
+
     // If another resize happens while throttled, it'll end up in the wrong
     // place. This fixes that:
     instantNavUpdate();
@@ -72,7 +69,9 @@ function closeMenu() {
   window.setTimeout(() => {
     navMenu.classList.remove('open');
     menuButton.classList.remove('active');
-  }, 300);
+  },
+  150
+  );
 }
 
 function navUpdate(e) {
@@ -81,8 +80,8 @@ function navUpdate(e) {
   // that as the target. Otherwise use current location.
   const targetPath = getBasePath(new URL(
     e && e.currentTarget.activeElement.href ?
-      e.currentTarget.activeElement.href :
-      window.location.href
+    e.currentTarget.activeElement.href :
+    window.location.href
   ).pathname);
 
 
@@ -123,24 +122,19 @@ function findTargetPosition(activeItem) {
 function Transformation(targetPosition) {
   this.scaleX = targetPosition.width / navTab.offsetWidth;
   this.scaleY = targetPosition.height / navTab.offsetHeight;
-  this.translateY = 
-    (targetPosition.top - navTab.offsetTop - navMenu.offsetTop) / this.scaleY;
-  this.translateX = 
-    (targetPosition.left - navTab.offsetLeft - navMenu.offsetLeft) / this.scaleX;
+  this.translateY = (targetPosition.top - navTab.offsetTop - navMenu.offsetTop);
+  this.translateX = (targetPosition.left - navTab.offsetLeft - navMenu.offsetLeft);
 }
 
 function updateHighlightPosition(targetPosition) {
   const trans = new Transformation(targetPosition);
-  const property =
-    `scale(${trans.scaleX}, ${trans.scaleY}) translate(${trans.translateX}px, ${trans.translateY}px)`;
-  // `translate(${trans.translateX}px, ${trans.translateY}px)`;
-  navTab.style.transform = property;
+  navTab.style.transform =
+    `translate(${trans.translateX}px, ${trans.translateY}px) scale(${trans.scaleX}, ${trans.scaleY}) `;
 }
 
-// Given a relative pathname, determine site base position. Example:
-// Given 'blog.html', return 'blog', given '/', return '', given
+// Given a relative pathname, determine site base position. Example: Given
+// 'blog.html', return 'blog', given '/', return '', given
 // '/blog/2018/aviation-and-programming.html' return 'blog'
 function getBasePath(url) {
-  const regex = /^\/?(\w*)[/.]?/;
-  return regex.exec(url)[1];
+  return /^\/?(\w*)[/.]?/.exec(url)[1];
 }

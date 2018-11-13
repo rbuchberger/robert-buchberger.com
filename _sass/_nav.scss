@@ -3,7 +3,7 @@
 body header {
   overflow: hidden;
 
-  a:focus, button:focus {
+  a:focus {
     outline: 1px solid var(--light-text-color);
   }
 }
@@ -18,7 +18,8 @@ nav.main {
     z-index: 10;
     box-shadow: 2px 1px 6px #0006;
 
-    // Approximately the correct size; scaling affects the box shadow.
+    // We start it with approximately the correct size, because scaling affects
+    // the box shadow.
     width: 80px;
     height: 20px;
     transform-origin: 0 0;
@@ -57,13 +58,6 @@ nav.main {
     svg path {
       fill: var(--background-color);
     }
-
-    &:hover {
-      text-shadow: 4px 3px 7px #0004;
-
-      // transition: .4s;
-   
-    }
   }
 
   li:not(.active):hover {
@@ -81,7 +75,7 @@ nav.main {
 }
 
 // Desktop styles:
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   nav.main {
     padding: 0 1em 1em 1em;
 
@@ -100,6 +94,7 @@ nav.main {
     }
   }
 
+  // Hide the hamburger menu on desktop.
   button.hamburger {
     display: none;
   }
@@ -108,99 +103,97 @@ nav.main {
 // Mobile styles
 @media (max-width: 600px) {
   button.hamburger {
-    background-color: var(--accent-color);
-    color: var(--background-color);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 0;
-    width: 50px;
-    height: 50px;
-    z-index: 20;
-    box-shadow: 3px 3px 20px #00000080;
     position: fixed;
     right: 20px;
     bottom: 60px;
-    font-size: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    background-color: var(--accent-color);
+    box-shadow: 3px 3px 20px #00000080;
+    border-radius: 50%;
     overflow: hidden;
+    font-size: 0;
 
+    // 3 spans make up the lines of the burger menu. Could be done with SVG, but
+    // this is not so complicated.
     span {
-      font-size: 0;
       position: absolute;
       height: 1px;
       width: 30px;
-      display: block;
+      right: 10px;
       background-color: var(--background-color);
       transform-origin: left;
-
       transition-property: transform;
       transition-duration: 150ms;
     }
+
     :nth-child(1) {
       top: 15px;
-      right: 10px;
     }
+
     :nth-child(2) {
       top: 25px;
-      right: 10px;
     }
+
     :nth-child(3) {
       top: 35px;
-      right: 10px;
     }
   }
-}
 
-button.hamburger.active {
-  // If I had better math available in CSS, I wouldn't have to hardcode these
-  // values
-  :nth-child(1) {
-    transform: rotate(33.7deg) scaleX(1.2);
-  }
-  :nth-child(2) {
-    transform: translateX(-100px);
-  }
-  :nth-child(3) {
-    transform: rotate(-33.7deg) scaleX(1.2);
-  }
-}
+  button.hamburger.active {
+    // If I trig functions in CSS, I wouldn't have to hardcode these values.
+    :nth-child(1) {
+      transform: rotate(33.7deg) scaleX(1.2);
+    }
 
-nav.main {
-  overflow: hidden;
-  transition: transform 150ms;
-  transform-origin: right bottom;
-  transform: scale(0);
-  background-color: var(--background-color);
-  position: fixed;
-  right: 45px;
-  left: 45px;
-  bottom: 85px;
-  border: 1px solid var(--accent-color);
-  box-shadow: 3px 3px 15px #0009;
+    :nth-child(2) {
+      transform: translateX(-100px);
+    }
 
-  // Fixes disappearing border on chrome
-  margin: 1px;
-  z-index: 10;
-
-  ul {
-    flex-direction: column;
-    align-items: center;
+    :nth-child(3) {
+      transform: rotate(-33.7deg) scaleX(1.2);
+    }
   }
 
-  a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1.3em;
-  }
+  nav.main {
+    // Initialize the menu closed.
+    transform: scaleX(0);
+    position: fixed;
+    right: 45px;
+    left: 45px;
+    bottom: 85px;
+    z-index: 10;
+    overflow: hidden;
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 3px 3px 15px #0009;
+    transition: transform 100ms 80ms;
+    transform-origin: right bottom;
 
-  li {
-    width: 100%;
-    margin: .4em 0;
-  }
-}
+    // Fixes disappearing border on chrome
+    margin: 1px;
 
-nav.main.open {
-  transform: scale(1);
+    ul {
+      flex-direction: column;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3em;
+    }
+
+    li {
+      width: 100%;
+      margin: .3em 0;
+    }
+
+    &.open {
+      transform: scaleX(1);
+    }
+  }
 }
 
 nav.social-media {
