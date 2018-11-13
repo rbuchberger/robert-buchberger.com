@@ -22,6 +22,11 @@ defaults:
       layout: "post"
       permalink: /blog/:year/:title:output_ext
 
+assets:
+  compress:
+    css: true
+    js: true
+
 sass: 
   style: compressed
 

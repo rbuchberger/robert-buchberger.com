@@ -4,3 +4,5 @@ Gemfile.lock
 .jekyll-metadata
 images/_source_files/
 images/generated/
+.jekyll-cache/
+

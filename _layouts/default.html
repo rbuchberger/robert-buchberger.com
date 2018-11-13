@@ -31,8 +31,10 @@
     </main>
     <footer>
       {% include site_footer.html %}
-      <script src="/js/swup.min.js"></script>
-      <script src="/js/script.js"></script>
+      {% comment %} <script src="/js/swup.min.js"></script> {% endcomment %}
+      {% comment %} <script src="/js/script.js"></script> {% endcomment %}
+      {% asset swup.min.js %}
+      {% asset script.js %}
     </footer>
   </body>
 </html>
