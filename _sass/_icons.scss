@@ -13,6 +13,11 @@
   }
 }
 
+.icon-inline {
+  height: 1em;
+  margin-right: .3em;
+}
+
 a:hover .icon-color path {
   transition-duration: .2s;
   fill: var(--accent-hover-color);

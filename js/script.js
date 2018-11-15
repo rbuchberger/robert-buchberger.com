@@ -80,8 +80,8 @@ function navUpdate(e) {
   // that as the target. Otherwise use current location.
   const targetPath = getBasePath(new URL(
     e && e.currentTarget.activeElement.href ?
-    e.currentTarget.activeElement.href :
-    window.location.href
+      e.currentTarget.activeElement.href :
+      window.location.href
   ).pathname);
 
 
@@ -90,9 +90,9 @@ function navUpdate(e) {
 
   // Grab appropriate nav item
   const activeItem = navItems.find(item => {
-    return getBasePath(item.firstChild.attributes.href.value) ===
+    return getBasePath(item.firstElementChild.attributes.href.value) ===
       targetPath;
-  });
+  }) || navItems[0];
 
   // Set target position of div
   const targetPosition = findTargetPosition(activeItem);
