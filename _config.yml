@@ -68,8 +68,8 @@ picture:
         height: 250
 
 css:
-  accent-color: '#9C3107'
-  accent-hover-color: '#07889c'
+  accent-color: '#743037'
+  accent-hover-color: '#220043'
   background-color: '#FAFAFA'
   foreground-color: '#464646'
   light-text-color: '#636363'
