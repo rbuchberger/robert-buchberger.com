@@ -42,30 +42,6 @@ icon_list:
 picture:
   source: images/_source_files
   output: images/generated
-  markup: img
-  strip_metadata: false
-  presets:
-    # Full width pictures
-    default:
-      ppi: [1, 2]
-      source_lrg:
-        width: 900
-      source_med:
-        width: 450
-      source_default:
-        width: 830
-    # Half width pictures
-    half:
-      ppi: [1, 1.5]
-      source_lrg:
-        media: "(min-width: 40em)"
-        width: 400
-      source_med:
-        media: "(min-width: 30em)"
-        width: 250
-      source_default:
-        width: 350
-        height: 250
 
 css:
   accent-color: '#743037'

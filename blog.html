@@ -6,9 +6,7 @@
     <ul class="project-showcase">
       {% for post in site.posts %}
         <li>
-          <a href="{{ post.url }}" class="showcase-image-anchor">
-            {% picture {{ post.image.url }} alt="{{ post.image.alt }}" class="showcase-image" %}
-          </a>
+          {% picture {{ post.image.url }} --alt {{ post.image.alt }} --picture class="showcase-image" %}
           <div class="name">
             <a href="{{ post.url }}">{{ post.title }}</a>
             <p class="muted">{{ post.date | date_to_long_string }}</p>

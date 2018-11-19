@@ -39,6 +39,12 @@ ul.project-showcase {
     padding: 0em;
     border: 1px solid var(--accent-color);
     border-bottom: none;
+
+    * {
+      width: inherit;
+      height: inherit;
+      display: block;
+    }
   }
 
   .showcase-image-anchor {
