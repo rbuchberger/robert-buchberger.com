@@ -80,9 +80,12 @@ code {
   }
 }
 
+p {
+  font-size: 1em;
+}
+
 p:not(:last-child) {
   margin-bottom: 1em;
-  font-size: 1em;
 }
 
 a, button {
@@ -126,7 +129,7 @@ ul {
 }
 
 .muted {
-  font-size: .9em;
+  // font-size: .9em;
   line-height: 1.6;
   color: var(--light-text-color);
 }
