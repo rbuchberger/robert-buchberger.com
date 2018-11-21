@@ -6,7 +6,7 @@ const menuButton = document.querySelector('.hamburger');
 const navTab = document.querySelector('div.navbar-tab');
 
 // DOMContentLoaded triggers when loading page the first time or on refresh.
-document.addEventListener('DOMContentLoaded', instantNavUpdate);
+window.addEventListener('load', instantNavUpdate);
 
 // swup:willReplaceContent triggers when a link is clicked. This allows the
 // animation to start instantly, rather than waiting for new content to
@@ -120,7 +120,9 @@ function findTargetPosition(activeItem) {
 }
 
 function Transformation(targetPosition) {
-  this.scaleX = targetPosition.width / navTab.offsetWidth;
+  // We add a little fudge factor to the X scale to prevent ugly white gaps
+  // between the outline and the highlight.
+  this.scaleX = .01 + (targetPosition.width / navTab.offsetWidth);
   this.scaleY = targetPosition.height / navTab.offsetHeight;
   this.translateY = (targetPosition.top - navTab.offsetTop - navMenu.offsetTop);
   this.translateX = (targetPosition.left - navTab.offsetLeft - navMenu.offsetLeft);
