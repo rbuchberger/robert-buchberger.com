@@ -10,25 +10,25 @@ image:
 
 ---
 
-## My background as a mechanic
+## I started out as a Mechanic.
 
-I started out as a C-130 Crew Chief, working in a back shop on mechanical systems such as the flight
-controls and landing gear. As one of my mentors put it (in a thick southern drawl): "Once you take
-somethin' apart, you understand it". Over the course of 3 years I increasingly understood the guts
-of the airplane, manipulating and disassembling critical components that rarely see the light of
-day. 
+C-130 Aero Repair Crew Chief to be specific, working in a back shop on mechanical systems such as
+the flight controls and landing gear. As one of my mentors put it (in a thick southern drawl): "Once
+you take something apart, you understand it." Over the course of 3 years I increasingly understood
+the guts of the airplane, manipulating and disassembling critical components that rarely see the
+light of day. 
 
-As we worked on these 28 year old airplanes, our biggest concern was the people who would fly on them. While all
-large aircraft are built with a great deal of redundancy, many of the components I worked on had no
-backups. There is no practical way to add a second set of wheels in case the first doesn't extend
-properly, and no way to add a second pair of ailerons in case the first jam up. These systems *must*
-function properly. It's the sort of thing that's always on your mind as you work.
+As you work on these 28 year old airplanes, your biggest concern is the people who will fly on
+them. While all large aircraft are built with a great deal of redundancy, many of the components I
+maintained had no backups. There is no practical way to add a second set of wheels in case the first
+doesn't extend properly, and no way to add a second pair of ailerons in case the first jam up. These
+systems *must* function properly. It's the sort of thing that's always on your mind.
 
 I learned to read, understand, and follow documentation to the letter. I learned to work slowly,
-carefully, consistently, and deliberately. When a single lost screw on a bad day could jam up the
-flight controls and kill everyone on board, *you don't lose screws*.
+carefully, consistently, and deliberately. When a single lost screw and a little bad luck could jam
+up the flight controls and kill a bunch of people, *you don't lose screws*.
 
-## Going to Fly
+## Then I got to go fly!
 
 {% picture blog/2018-09-19/formation_takeoff.jpg alt="Formation Takeoff on a Humid Day" %}
 
@@ -38,21 +38,21 @@ answer because it encompasses many different duties, from the preflight inspecti
 flight, until we put the airplane to bed. It's a dying career field, replaced by computers on nearly
 all aircraft flying today. The shortest accurate description is "Systems Expert". I sit in the
 middle seat, behind the throttles, and run the systems that keep us flying. When they malfunction,
-as all mechanical systems do, it's my job to notice, alert the crew, and know how to handle it.
+as all machines do, it's my job to notice, alert the crew, and know how to handle it.
 
 This new position took many of the challenges of my previous one, and added time pressure. Instead
 of hours or days to solve a problem, I have seconds or minutes. When one forgotten switch of 20 in a
 checklist can overheat a system, or give the whole crew hypoxia, you continue to work slowly,
-deliberately, and consistenly. You learn that some mistakes are forgivable, and some are not. 
+deliberately, and consistenly. You learn that most mistakes are forgivable, but some are not. 
 
-As a mechanic, the only people I generally interacted with were my supervisors and coworkers. Now,
-as an engineer, the only time I work with another engineer is my yearly checkride.  Instead I
-integrate with a crew of 6, giving meaningful, timely, and useful input. Your interpersonal skills
-improve in that situation; you learn to disagree and point out mistakes, productively and without
-insult (explicit or implied). You learn to have your own mistakes and failings pointed out in a
-similar manner, without taking offense. These are the strengths that make a crewed aircraft so
-effective; we live and die together, and all criticism is for the sake of future success. Hubris
-doesn't last long in that world.
+As a mechanic, I generally interacted with other mechanics. As an engineer, the only time I
+work with another engineer is my yearly checkride. Instead I integrate with a crew of 6, giving
+meaningful, timely, and useful input. Your interpersonal skills improve in that situation; you learn
+to disagree and point out mistakes, productively and without insult (explicit or implied). You learn
+to have your own mistakes and failings pointed out in a similar manner, without taking offense.
+These are the strengths that make a crewed aircraft so effective; we live and die together, and all
+criticism is for the sake of future success. Hubris doesn't last long in that world. (Well,
+sometimes it does. You know how pilots are.)
 
 ## So how does this relate to programming?
 
