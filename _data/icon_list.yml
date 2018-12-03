@@ -50,3 +50,15 @@ ruby:
 sql:
   icon: sql-logo.svg
   label: SQL
+express:
+  icon: expressjs.svg
+  label: express.js
+node: 
+  icon: Nodejs.svg
+  label: Node.js
+vue:
+  icon: vue.svg
+  label: Vue.js
+react:
+  icon: react.svg
+  label: React
