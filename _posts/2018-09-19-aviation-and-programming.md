@@ -43,7 +43,7 @@ as all machines do, it's my job to notice, alert the crew, and know how to handl
 This new position took many of the challenges of my previous one, and added time pressure. Instead
 of hours or days to solve a problem, I have seconds or minutes. When one forgotten switch of 20 in a
 checklist can overheat a system, or give the whole crew hypoxia, you continue to work slowly,
-deliberately, and consistenly. You learn that most mistakes are forgivable, but some are not. 
+deliberately, and consistently. You learn that most mistakes are forgivable, but some are not. 
 
 As a mechanic, I generally interacted with other mechanics. As an engineer, the only time I
 work with another engineer is my yearly checkride. Instead I integrate with a crew of 6, giving
@@ -70,7 +70,7 @@ It would certainly be possible to activate and deactivate an engine generator by
 disconnecting wires within it while the engine is running (and there are legends about this sort of
 thing actually happening), but you'd be absolutely insane to do so. There is a switch in the cockpit
 to accomplish this. While that generator is operating, I don't know what the various switches and
-coils are doing within it are doing, but I can monitor its frequency and voltage to know that it's
+coils within it are doing, but I can monitor its frequency and voltage to know that it's
 working properly. It's *encapsulated*. 
 
 ### Abstraction
@@ -81,7 +81,7 @@ The electrical shop can completely understand one, disassemble it, and fix it, w
 shop doesn't need to know about generators in order to fix their electric pumps. The fat, dumb, and
 happy Flight Engineer doesn't need to know either of those things in order to use both.
 
-### Inheritence
+### Inheritance
 
 Both an aircraft and a program are incredibly complex, often so complex that no single person can
 maintain a working knowledge of the entire system, and yet they are built up on the repeated use of
