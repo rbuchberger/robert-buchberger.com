@@ -1,6 +1,6 @@
 aws:
   icon: aws-logo.svg
-  label: Amazon Web Services
+  label: AWS
 bootstrap:
   icon: bootstrap-logo-2.svg
   label: Bootstrap
@@ -10,6 +10,9 @@ css:
 databases:
   icon: sql-logo.svg
   label: Databases
+english:
+  icon: united-states.svg
+  label: English (Native)
 fundamentals:
   icon: generic-code-logo2.svg
   label: Fundamentals
@@ -30,7 +33,7 @@ jekyll:
   label: Jekyll
 linux:
   icon: tux.svg
-  label: Linux Command Line
+  label: Linux
 oop:
   icon: generic-oop-icon.svg
   label: Object Oriented Design
