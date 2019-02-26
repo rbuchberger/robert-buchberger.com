@@ -84,7 +84,6 @@ function navUpdate(e) {
       window.location.href
   ).pathname);
 
-
   // Grab all nav items
   const navItems = Array.from(navMenuList.children);
 
