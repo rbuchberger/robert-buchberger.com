@@ -12,5 +12,4 @@ group :jekyll_plugins do
   # gem 'jekyll-picture-tag', path: '/home/robert/development/jekyll-picture-tag'
   gem 'jekyll-picture-tag', git: 'https://github.com/robwierzbowski/jekyll-picture-tag.git'
   gem 'jekyll_icon_list', '~> 0'
-  gem 's3_website'
 end
