@@ -7,7 +7,6 @@ image:
   url: blog/2018-09-19/office_view.jpg
   alt: C-130s on the Runway
   caption: "View from my office"
-
 ---
 
 ## I started out as a Mechanic.

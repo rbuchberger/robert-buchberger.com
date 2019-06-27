@@ -1,8 +1,3 @@
-plugins:
-  - jekyll-inline-svg 
-  - jekyll_icon_list
-  - jekyll-picture-tag
-
 defaults:
   -
     scope:
@@ -40,7 +35,7 @@ icon_list:
     svg: overflow="visible" class="icon"
 
 picture:
-  source: images/_source_files
+  source: images/source_files
   output: images/generated
 
 css:

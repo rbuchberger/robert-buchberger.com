@@ -1,7 +1,7 @@
 // navbar
 
-body header {
-  overflow: hidden;
+body > header {
+  width: 100vw;
 
   a:focus {
     outline: 1px solid var(--light-text-color);
@@ -72,6 +72,42 @@ nav.main {
       color: inherit;
     }
   }
+
+  li.dropdown-parent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul.nav-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: .4s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    top: 2em;
+
+    li, a {
+      transition-property: text-shadow, text-decoration;
+      transition-duration: .2s;
+    }
+
+    a:focus, a:active {
+      outline: none;
+      // text-shadow: 0 0 9px var(--light-text-color);
+      text-decoration: underline;
+    }
+  }
+
+  li.dropdown-parent:hover > ul,
+  li.dropdown-parent:focus-within > ul ,
+  ul.nav-dropdown:hover {
+    // display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 // Desktop styles:
@@ -82,6 +118,7 @@ nav.main {
     ul {
       flex-direction: row;
       justify-content: end;
+      align-items: flex-start;
     }
 
     a {
