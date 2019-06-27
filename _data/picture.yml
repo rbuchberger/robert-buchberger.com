@@ -10,6 +10,7 @@ markup_presets:
     sizes: 
       full_width: 862px
     size: calc(100vw - 18px)
+    link_source: true
 
   project_showcase:
     formats: [webp, original]
@@ -36,3 +37,4 @@ markup_presets:
       full_width: 862px
     size: calc(100vw - 18px)
     nomarkdown: false
+    link_source: true
