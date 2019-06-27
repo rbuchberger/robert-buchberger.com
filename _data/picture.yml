@@ -28,3 +28,11 @@ markup_presets:
     pixel_ratios: [1, 1.5, 2]
     attributes:
       picture: 'class="circle-portrait"'
+
+  blog_hero:
+    formats: [webp, original]
+    widths: [500, 600, 700, 800, 900, 1000, 1200, 1600]
+    sizes: 
+      full_width: 862px
+    size: calc(100vw - 18px)
+    nomarkdown: false

@@ -12,7 +12,7 @@ layout: default
     </div>
     {% if page.image %}
       <figure>
-        {% picture {{ page.image.url }} alt="{{ page.image.alt }}" %}
+        {% picture blog_hero {{ page.image.url }} alt="{{ page.image.alt }}" %}
         <figcaption>{{ page.image.caption }}</figcaption>
       </figure>
     {% endif %}
