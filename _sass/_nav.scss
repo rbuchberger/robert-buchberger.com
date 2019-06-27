@@ -1,7 +1,7 @@
 // navbar
 
-body header {
-  // width: 100vw;
+body > header {
+  width: 100vw;
 
   a:focus {
     outline: 1px solid var(--light-text-color);
