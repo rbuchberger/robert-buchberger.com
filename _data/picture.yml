@@ -11,6 +11,8 @@ markup_presets:
       full_width: 862px
     size: calc(100vw - 18px)
     link_source: true
+    attributes:
+      a: 'data-no-swup="true"'
 
   project_showcase:
     formats: [webp, original]
@@ -30,7 +32,7 @@ markup_presets:
     attributes:
       picture: 'class="circle-portrait"'
 
-  blog_hero:
+  blog:
     formats: [webp, original]
     widths: [500, 600, 700, 800, 900, 1000, 1200, 1600]
     sizes: 

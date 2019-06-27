@@ -7,6 +7,7 @@
       {% for post in site.posts %}
         <li>
           {% picture 
+            blog
             {{ post.image.url }} 
             --alt {{ post.image.alt }} 
             --picture class="showcase-image" 
