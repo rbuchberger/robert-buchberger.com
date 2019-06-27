@@ -1,5 +1,4 @@
-// import Swup from '/js/swup.min.js';
-// eslint no-unused-vars: off, no-undef: off
+import Swup from 'swup'
 const navMenu = document.querySelector('nav.main')
 const navMenuList = document.querySelector('nav.main ul')
 const menuButton = document.querySelector('.hamburger')
