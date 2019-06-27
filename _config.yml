@@ -1,7 +1,3 @@
-plugins:
-  - jekyll-inline-svg 
-  - jekyll_icon_list
-
 defaults:
   -
     scope:
