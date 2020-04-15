@@ -29,7 +29,7 @@ icon_list:
   default_path: /images/logos/
   defaults:
     ul: class="tech-list"
-    svg: overflow="visible" class="icon"
+    svg: overflow="visible" class="icon" width="24"
 
 picture:
   source: images/source_files
