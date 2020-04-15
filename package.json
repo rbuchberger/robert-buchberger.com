@@ -5,7 +5,8 @@
   "private": true,
   "main": "js/script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "JEKYLL_ENV=development ./node_modules/.bin/webpack --watch --mode development | bundle exec jekyll serve --livereload",
+    "build": "JEKYLL_ENV=production ./node_modules/.bin/webpack --mode production | bundle exec jekyll build"
   },
   "repository": {
     "type": "git",
