@@ -17,16 +17,11 @@ defaults:
       layout: "post"
       permalink: /blog/:year/:title:output_ext
 
-assets:
-  compress:
-    css: true
-    js: true
+# sass: 
+#   style: compressed
 
-sass: 
-  style: compressed
-
-svg:
-  optimize: true
+# svg:
+#   optimize: true
 
 icon_list:
   default_path: /images/logos/
