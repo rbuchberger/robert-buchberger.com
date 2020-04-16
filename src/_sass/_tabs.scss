@@ -36,3 +36,10 @@
   transform: scaleY(0%);
   display: none;
 }
+
+// On small screens they run off the side of the page:
+@media (max-width: 670px) {
+  .tabs__button {
+    padding: 0.2em .8em;
+  }
+}
