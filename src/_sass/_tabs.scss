@@ -1,0 +1,38 @@
+.tabs__nav {
+  margin: 3em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.tabs__button {
+  border-bottom: 1px solid var(--accent-color);
+  margin: 0;
+  padding: 0.2em 2em;
+  cursor: pointer;
+}
+
+.tabs__button:focus,
+.tabs__button:active,
+.tabs__button:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+.tabs__button_active {
+  border: 1px solid var(--accent-color);
+  border-radius: 5% 5% 0 0;
+}
+
+.tabs__page {
+  margin-top: 1em;
+  transition: opacity 0.2s ease-in-out;
+  position: relative;
+}
+
+.tabs__page_hidden {
+  opacity: 0;
+  transform: scaleY(0%);
+  display: none;
+}
