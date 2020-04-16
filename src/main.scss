@@ -1,27 +1,31 @@
 ---
 ---
-@import 'reset';
 
+@import 'base';
+@import 'layout';
+@import 'typography';
+
+@import 'post';
+@import 'resume';
 @import 'footer';
 @import 'icons';
-@import 'layout';
-@import 'nav';
-@import 'project_showcase';
-@import 'typography';
-@import 'print';
-@import 'blog';
 
-// Site-wide color palette:
+@import 'nav';
+@import 'tabs';
+@import 'project_showcase';
+
+@import 'print';
+
+// Color palette:
+// This has to be in this particular file, because Jekyll won't substitute in 
+// these variables otherwise.
 :root {
-  // --accent-color: #27A822;
   --accent-color: {{ site.css.accent-color }};
   --accent-hover-color: {{ site.css.accent-hover-color }};
   --background-color: {{ site.css.background-color }};
   --foreground-color: {{ site.css.foreground-color }};
   --light-text-color: {{ site.css.light-text-color }};
 }
-
-// Special items
 
 // Index Page
 .circle-portrait {
@@ -48,12 +52,3 @@
   }
 }
 
-// Page load transition
-.transition-fade {
-  transition: opacity 80ms;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade{
-  opacity: 0;
-}
