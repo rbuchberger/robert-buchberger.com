@@ -82,19 +82,21 @@ nav.main {
     visibility: hidden;
     opacity: 0;
     transition-property: opacity, visibility;
-    transition-duration: .4s;
+    transition-duration: 0.4s;
     display: flex;
     flex-direction: column;
     position: absolute;
     align-items: flex-start;
     top: 2em;
 
-    li, a {
+    li,
+    a {
       transition-property: text-shadow, text-decoration;
-      transition-duration: .2s;
+      transition-duration: 0.2s;
     }
 
-    a:focus, a:active {
+    a:focus,
+    a:active {
       outline: none;
       // text-shadow: 0 0 9px var(--light-text-color);
       text-decoration: underline;
@@ -102,7 +104,7 @@ nav.main {
   }
 
   li.dropdown-parent:hover > ul,
-  li.dropdown-parent:focus-within > ul ,
+  li.dropdown-parent:focus-within > ul,
   ul.nav-dropdown:hover {
     // display: flex;
     visibility: visible;
@@ -181,7 +183,7 @@ nav.main {
   button.hamburger.active {
     // If I trig functions in CSS, I wouldn't have to hardcode these values.
     :nth-child(1) {
-      transform: translateX(4.4px) rotate(45deg);
+      transform: translateX(3.1px) rotate(41.8deg);
     }
 
     :nth-child(2) {
@@ -189,7 +191,7 @@ nav.main {
     }
 
     :nth-child(3) {
-      transform: translateX(4.4px) rotate(-45deg);
+      transform: translateX(3.1px) rotate(-41.8deg);
     }
   }
 
@@ -232,7 +234,6 @@ nav.main {
         flex: 66%;
         font-size: 1.3em;
       }
-
     }
 
     li {
@@ -261,6 +262,6 @@ nav.social-media {
     display: inline-block;
     margin: 0 1rem;
     transition-property: fill-color;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
   }
 }
