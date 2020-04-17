@@ -18,15 +18,10 @@
     </nav>
 
     <section class="tabs__page tabs__page_hidden" data-index="1">
-
       <ul class="project-showcase">
         <li>
-
-          {% picture 
-            project_showcase 
-            projects/screenshot-mtns.png 
-            mobile: projects/screenshot-mtns-mobile.png 
-            --alt Screenshot of MTNS Homepage
+          {% picture project_showcase projects/screenshot-mtns.png mobile:
+          projects/screenshot-mtns-mobile.png --alt Screenshot of MTNS Homepage
           %}
 
           <div class="name">
@@ -47,13 +42,29 @@
         </li>
 
         <li>
-          {% 
-            picture 
-            project_showcase 
-            projects/screenshot-LiSEC-Tech.png 
-            mobile: projects/screenshot-LiSEC-Tech-mobile.png 
-            --alt Screenshot of LiSEC-Tech.com 
-          %}
+          {% picture project_showcase projects/chunker_desktop.png mobile:
+          projects/chunker_mobile.png --alt Screenshot of Chart Chunker %}
+
+          <div class="name">
+            Battery Data Analyzer
+            <a href="https://github.com/rbuchberger/chart_chunker">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list vue nuxt vuetify %}
+            <p class="muted">
+              This data-wrangling web-application solves a daily, tedious
+              problem for a group of battery researchers. If you'd like a demo,
+              please ask!
+            </p>
+          </div>
+        </li>
+
+        <li>
+          {% picture project_showcase projects/screenshot-LiSEC-Tech.png mobile:
+          projects/screenshot-LiSEC-Tech-mobile.png --alt Screenshot of
+          LiSEC-Tech.com %}
 
           <div class="name">
             <a href="http://lisec-tech.com">LiSEC-tech.com</a>
@@ -70,7 +81,7 @@
               <a href="https://github.com/iwiedenm/jekyll-theme-massively-src">
                 Massively
               </a>
-              ). It was originally hosted in an AWS S3 bucket, but I ultimately 
+              ). It was originally hosted in an AWS S3 bucket, but I ultimately
               moved it to netlify for convenience.
             </p>
           </div>
@@ -168,7 +179,6 @@
     </section>
 
     <section class="tabs__page tabs__page_hidden" data-index="3">
-
       <ul class="project-showcase">
         <li>
           <div class="name">
