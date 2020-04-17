@@ -17,6 +17,7 @@ nav.main {
     position: absolute;
     z-index: 10;
     box-shadow: 2px 1px 6px #0006;
+    border-radius: 0 0 2px 2px;
 
     // We start it with approximately the correct size, because scaling affects
     // the box shadow.
