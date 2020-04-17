@@ -1,0 +1,79 @@
+aws:
+  icon: aws-logo.svg
+  label: AWS
+bootstrap:
+  icon: bootstrap-logo-2.svg
+  label: Bootstrap
+bash:
+  icon: bash.svg
+  label: Bash
+css:
+  icon: css-logo.svg
+  label: CSS
+databases:
+  icon: sql-logo.svg
+  label: Databases
+english:
+  icon: united-states.svg
+  label: English (Native)
+fundamentals:
+  icon: generic-code-logo2.svg
+  label: Fundamentals
+git:
+  icon: git-logo.svg
+  label: Git
+heroku:
+  icon: heroku-logo.svg
+  label: Heroku
+html:
+  icon: html-logo.svg
+  label: HTML
+javascript:
+  icon: javascript-logo.svg
+  label: Javascript
+jekyll:
+  icon: jekyll.svg
+  label: Jekyll
+linux:
+  icon: tux.svg
+  label: Linux
+nuxt:
+  icon: nuxt.svg
+  label: NuxtJS
+netlify:
+  icon: netlify.svg
+  label: Netlify
+oop:
+  icon: generic-oop-icon.svg
+  label: Object Oriented Design
+polish:
+  icon: poland.svg
+  label: Polish (Beginner)
+qa:
+  icon: generic-code-logo.svg
+  label: Quality Assurance
+rails:
+  icon: rails-logo.svg
+  icon2: ruby-logo.svg
+  label: Ruby on Rails
+ruby:
+  icon: ruby-logo.svg
+  label: Ruby
+sql:
+  icon: sql-logo.svg
+  label: SQL
+express:
+  icon: expressjs.svg
+  label: express.js
+node: 
+  icon: Nodejs.svg
+  label: Node.js
+vue:
+  icon: vue.svg
+  label: Vue.js
+vuetify:
+  icon: vuetify.svg
+  label: Vuetify
+react:
+  icon: react.svg
+  label: React

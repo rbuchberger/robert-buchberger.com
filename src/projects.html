@@ -1,0 +1,272 @@
+---
+---
+
+<article>
+  <header>
+    <h1>Projects</h1>
+    <p class="text-center">
+      I build things! Here are the highlights.
+    </p>
+  </header>
+  <div class="tabs">
+    <nav class="tabs__nav">
+      <a class="tabs__button" data-index="1" tabindex="0">
+        Websites
+      </a>
+      <a class="tabs__button" data-index="2" tabindex="0">Libraries</a>
+      <a class="tabs__button" data-index="3" tabindex="0">Education</a>
+    </nav>
+
+    <section class="tabs__page tabs__page_hidden" data-index="1">
+      <ul class="project-showcase">
+        <li>
+          {% picture project_showcase projects/screenshot-mtns.png mobile:
+          projects/screenshot-mtns-mobile.png --alt Screenshot of MTNS Homepage 
+          --picture class="showcase-image_border"
+          %}
+
+          <div class="name">
+            <a href="http://monroetnsheriff.org">monroetnsheriff.org</a>
+            <a href="https://github.com/rbuchberger/pd-aux-training">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list rails bootstrap heroku aws %}
+            <p class="muted">
+              This Rails application provides training, bulletin, document
+              library, and time tracking features to a volunteer component of a
+              county sheriff's office. It has been reliably tracking ~500
+              volunteer hours per month since January 2018.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          {% picture project_showcase projects/chunker_desktop.png mobile:
+          projects/chunker_mobile.png --alt Screenshot of Chart Chunker 
+          --picture class="showcase-image_border"
+          %}
+
+          <div class="name">
+            Battery Data Analyzer
+            <a href="https://github.com/rbuchberger/chart_chunker">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list vue nuxt vuetify %}
+            <p class="muted">
+              This data-wrangling web-application solves a daily, tedious
+              problem for a group of battery researchers. If you'd like a demo,
+              please ask!
+            </p>
+          </div>
+        </li>
+
+        <li>
+          {% picture project_showcase projects/screenshot-LiSEC-Tech.png mobile:
+          projects/screenshot-LiSEC-Tech-mobile.png --alt Screenshot of
+          LiSEC-Tech.com --picture class="showcase-image_border" %}
+
+          <div class="name">
+            <a href="http://lisec-tech.com">LiSEC-tech.com</a>
+            <a href="https://github.com/rbuchberger/lisec-tech.com">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list jekyll %}
+            <p class="muted">
+              This is a recruitment, blog, and project site for a university
+              research grant. I used a static site generator and customized a
+              pre-made theme (
+              <a href="https://github.com/iwiedenm/jekyll-theme-massively-src">
+                Massively
+              </a>
+              ). It was originally hosted in an AWS S3 bucket, but I ultimately
+              moved it to netlify for convenience.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="http://robert-buchberger.com">robert-buchberger.com</a>
+            <a href="https://github.com/rbuchberger/robert-buchberger.com">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list jekyll %}
+            <p class="muted">
+              You're Looking at it! I wrote this one almost entirely from
+              scratch, though I did take design inspiration from the
+              <a href="https://github.com/jekyller/sustain">sustain</a>
+              theme.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="tabs__page tabs__page_hidden" data-index="2">
+      <ul class="project-showcase">
+        <li>
+          <div class="name">
+            <a
+              href="https://github.com/robwierzbowski/jekyll-picture-tag/pull/88"
+            >
+              Jekyll Picture Tag
+            </a>
+            <a href="https://github.com/robwierzbowski/jekyll-picture-tag/">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list ruby jekyll html %}
+            <p class="muted">
+              It's easy to throw an image on a webpage and call it a day. Doing
+              justice to your users by serving it efficiently on all screen
+              sizes is tedious and tricky. Tedious, tricky things should be
+              automated; Jekyll Picture Tag makes the latter nearly as simple as
+              the former.
+            </p>
+            <p class="muted">
+              I didn't write it originally, but I did rewrite it! I brought its
+              feature set in line with modern standards, and greatly improved
+              the plugin's architecture to simplify future improvements.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="https://rubygems.org/gems/objective_elements">
+              Objective Elements
+            </a>
+            <a href="https://github.com/rbuchberger/objective_elements">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list ruby %}
+            <p class="muted">
+              Featherweight, dependencyless HTML generator. After working with
+              Jekyll Icon List, and attempting to improve some other stale
+              plugins, I realized that string interpolation and concatenation
+              are entirely inadequate for programatically building HTML.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="https://rubygems.org/gems/jekyll_icon_list">
+              Jekyll Icon List
+            </a>
+            <a href="https://github.com/rbuchberger/jekyll_icon_list">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list ruby jekyll %}
+            <p class="muted">
+              This is a small Jekyll plugin, written in Ruby, which builds lists
+              of icons & labels (like the one above this paragraph!) It saves a
+              lot of time writing and updating markup.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="tabs__page tabs__page_hidden" data-index="3">
+      <ul class="project-showcase">
+        <li>
+          <div class="name">
+            <a href="https://www.youtube.com/user/TechGuyWeb">
+              Traversy Media
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list react vue node express css git %}
+            <p class="muted">
+              I've worked through Brad Traversy's excellent introductions to
+              React, Vue.js, Node.js, and Express.js, as well as his lessons on
+              CSS Grid, Freelancing, and Git.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="https://javascript30.com">Javascript30</a>
+            <a href="https://github.com/rbuchberger/JavaScript30">
+              {% svg /images/logos/github-mark.svg width=2em class="icon icon-big icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list javascript %}
+            <p class="muted">
+              30 small vanilla Javascript coding exercises.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="https://www.codecademy.com/">CodeCademy</a>
+          </div>
+          <div class="description">
+            {% icon_list ruby html css javascript sql %}
+            <p class="muted">
+              During the course of my other projects, I worked through several
+              CodeCademy courses (though not generally to 100% completion) when
+              I felt a need to improve my foundational understanding of a given
+              technology.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name" id="upskill">
+            <a
+              href="https://upskillcourses.com/p/essential-web-developer-course"
+            >
+              Upskill Essential Web Developer Course
+            </a>
+            <a href="https://github.com/rbuchberger/upskill_saas_tutorial">
+              {% svg /images/logos/github-mark.svg width="2em" overflow="visible" class="icon icon-big icon-color icon-color" title="view on github" %}
+            </a>
+          </div>
+          <div class="description">
+            {% icon_list rails html css javascript git bootstrap heroku %}
+            <p class="muted">
+              Started with an introduction to the fundamentals and a simple
+              blog, then moved on to building a complete website. I'd toyed
+              around with some programming and basic web pages before, but this
+              was my practical introduction to Ruby on Rails, relational
+              databases, REST, version control, and a high level understanding
+              of the architecture behind a functioning web application.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="name">
+            <a href="https://www.lynda.com/">Lynda</a>
+          </div>
+          <div class="description">
+            {% icon_list fundamentals oop databases git qa %}
+            <p class="muted">
+              This is where I started, in September of 2017. Over the course of
+              a few weeks I completed approximately 16 hours of video lectures
+              covering the foundational principles of programming.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</article>

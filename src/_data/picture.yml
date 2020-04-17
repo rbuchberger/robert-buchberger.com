@@ -1,0 +1,43 @@
+media_presets:
+  full_width: 'min-width: 901px'
+  tablet: 'min-width: 601px'
+  mobile: 'max-width: 600px'
+
+markup_presets:
+  default:
+    formats: [webp, original]
+    widths: [500, 600, 700, 800, 900, 1000, 1200, 1600]
+    sizes: 
+      full_width: 862px
+    size: calc(100vw - 18px)
+    link_source: true
+    attributes:
+      a: 'data-no-swup="true"'
+
+  project_showcase:
+    formats: [original]
+    widths: [700, 864, 900, 1296, 1600, 1728]
+    media_widths:
+      mobile: [400, 500, 600, 700, 800]
+    sizes: 
+      full_width: 864px
+    size: calc(100vw - 18px)
+    attributes:
+      picture: 'class="showcase-image"'
+
+  circle_portrait:
+    formats: [original]
+    base_width: 300
+    pixel_ratios: [1, 1.5, 2]
+    quality: 90
+    attributes:
+      parent: 'class="circle-portrait"'
+
+  blog:
+    formats: [webp, original]
+    widths: [500, 600, 700, 800, 900, 1000, 1200, 1600]
+    sizes: 
+      full_width: 862px
+    size: calc(100vw - 18px)
+    nomarkdown: false
+    link_source: true

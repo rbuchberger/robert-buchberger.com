@@ -1,0 +1,29 @@
+---
+---
+
+<article class="blog">
+  <nav class="blog-posts">
+    <ul class="project-showcase">
+      {% for post in site.posts %}
+        <li>
+          {% picture 
+            blog
+            {{ post.image.url }} 
+            --alt {{ post.image.alt }} 
+            --picture class="showcase-image" 
+            --link {{ post.url }}
+          %}
+          <div class="name">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p class="muted">{{ post.date | date_to_long_string }}</p>
+          </div>
+          <div class="description">
+            <p class="muted">
+              {{ post.summary }}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</article>

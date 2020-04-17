@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    {% picture circle_portrait portrait-cropped.jpg --alt Robert %}
+    <h1>Robert Buchberger</h1>
+  </header>
+  <section>
+    <p class="skinny-center-justified">
+      Hi! I'm a developer. I build websites, tools for building websites, and 
+      other interesting things as the opportunity arises. I'm a big fan of Ruby, 
+      comfortable with Javascript, and at home on the command line. Check out my 
+      projects!
+    </p>
+    <div id="app">{{ message }}</div>
+    <nav class="social-media">
+      <a href="mailto:robert@buchberger.cc">
+        {% svg /images/mail.svg overflow="visible" width="40" class="icon-big icon icon-color" title="Send e-mail" %}
+      </a>
+      <a href="https://github.com/rbuchberger">
+        {% svg /images/logos/github-mark.svg width="40" overflow="visible" class="icon-big icon-color icon" title="View Github Profile"%}
+      </a>
+    </nav>
+  </section>
+</article>

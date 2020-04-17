@@ -1,3 +1,5 @@
+source: src
+
 defaults:
   -
     scope:
@@ -17,22 +19,17 @@ defaults:
       layout: "post"
       permalink: /blog/:year/:title:output_ext
 
-assets:
-  compress:
-    css: true
-    js: true
+# sass: 
+#   style: compressed
 
-sass: 
-  style: compressed
-
-svg:
-  optimize: true
+# svg:
+#   optimize: true
 
 icon_list:
   default_path: /images/logos/
   defaults:
     ul: class="tech-list"
-    svg: overflow="visible" class="icon"
+    svg: overflow="visible" class="icon" width="24"
 
 picture:
   source: images/source_files
