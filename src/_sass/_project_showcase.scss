@@ -10,7 +10,6 @@ ul.project-showcase {
   .name, .description {
     padding-top: 1em;
     padding-bottom: 1em;
-    // border-top: 1px solid var(--accent-color);
   }
 
   .name {
@@ -37,7 +36,6 @@ ul.project-showcase {
     // height: 100%; // For some reason chrome stretches images vertically if you don't set this. Firefox doesn't care.
     margin-bottom: 0em;
     padding: 0em;
-    // border-bottom: none;
     border-bottom: 1px solid var(--accent-color);
 
     * {
@@ -68,7 +66,10 @@ ul.project-showcase {
       border-bottom: 1px solid var(--accent-color);
     }
 
-    .showcase-image {
+    .showcase-image_border {
+      border-top: 1px solid var(--accent-color);
+      border-left: 1px solid var(--accent-color);
+      border-right: 1px solid var(--accent-color);
       border-bottom: none;
     }
 
