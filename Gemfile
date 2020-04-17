@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'jekyll', '~> 4'
+# gem 'jekyll', '~> 4'
+gem 'jekyll', '~> 4', github: 'jekyll/jekyll'
 
 group :jekyll_plugins do
   gem 'jekyll-inline-svg'
