@@ -4,7 +4,11 @@ body > header {
   width: 100vw;
 
   a:focus {
-    outline: 1px solid var(--light-text-color);
+    outline: none;
+  }
+
+  a:focus span:nth-child(2) {
+    text-decoration: underline;
   }
 }
 
