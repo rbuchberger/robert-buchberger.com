@@ -1,9 +1,9 @@
-media_presets:
+media_queries:
   full_width: 'min-width: 901px'
   tablet: 'min-width: 601px'
   mobile: 'max-width: 600px'
 
-markup_presets:
+presets:
   default:
     formats: [webp, original]
     widths: [500, 600, 700, 800, 900, 1000, 1200, 1600]
@@ -11,12 +11,15 @@ markup_presets:
       full_width: 862px
     size: calc(100vw - 18px)
     link_source: true
+    data_attributes: true
     attributes:
       a: 'data-no-swup="true"'
 
   project_showcase:
-    formats: [original]
+    formats: [webp, original]
     widths: [700, 864, 900, 1296, 1600, 1728]
+    format_quality:
+      webp: 100
     media_widths:
       mobile: [400, 500, 600, 700, 800]
     sizes: 
@@ -26,7 +29,7 @@ markup_presets:
       picture: 'class="showcase-image"'
 
   circle_portrait:
-    formats: [original]
+    formats: [webp, original]
     base_width: 300
     pixel_ratios: [1, 1.5, 2]
     quality: 90
