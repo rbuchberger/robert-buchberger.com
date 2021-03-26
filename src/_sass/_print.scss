@@ -1,24 +1,35 @@
 // Print formatting, mostly for the resume
 
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
 @media print {
+
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
 
   body > header, body > footer {
     display: none;
   }
 
   html body {
-    font-size: 11px;
+    font-size: 13px;
     border: none;
     background: none;
-    color: black;
+    // color: black;
   }
 
   p.muted {
-    color: black;
+    // color: black;
   }
 
   html dl.stacked dd {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
   }
 
   body article {
@@ -69,7 +80,7 @@
       div {
         display: inline-block;
         width: 85%;
-        color: black;
+        // color: black;
       }
     }
   }
