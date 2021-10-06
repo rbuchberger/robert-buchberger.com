@@ -21,9 +21,10 @@
   <section>
     <h4 class="text-center keyline-bottom">Strength & Experience</h4>
     <p>
-      Maintain several websites and software libraries, including a Rails
-      application tracking approximately 500 volunteer hours per month and a
-      Jekyll plugin with ~450 stars on GitHub.
+      Maintain several websites and software libraries, including a learning
+      platform under heavy development, a popular Jekyll plugin with over 500
+      stars on GitHub and a Rails application tracking approximately 500
+      volunteer hours per month.
     </p>
     <p>
       As an aircrew member: think and act under pressure, integrate with a team,
@@ -33,33 +34,90 @@
   </section>
 
   <section>
-    <h4 class="keyline-bottom text-center">Employment & Project History</h4>
+    <h4 class="text-center keyline-bottom">Employment</h4>
+    <dl class="stacked">
+      <dt>
+        <h4>Software Engineer, May 2021 - Present</h4>
+        <p class="subtitle">
+          Learnlife
+        </p>
+      </dt>
+      <dd>
+        {% icon_list ruby rails typescript react tailwind %}
+        <p class="muted">
+          Coordinate 100% async remotely with a small team: write clear,
+          maintainable code, review code, exchange constructive feedback.
+        </p>
+        <p class="muted">
+          Add features, fix bugs, ensure accessibility for all learners who will
+          use our platform.
+        </p>
+        <p class="muted">
+          Make and contribute to architecture decisions: database design,
+          technology stack, application structure.
+        </p>
+      </dd>
+      <dt>
+        <h4>C-130 Flight Engineer, 2012-2019</h4>
+        <p class="subtitle">
+          165th Airlift Squadron, Kentucky Air National Guard
+        </p>
+      </dt>
+      <dd>
+        <p class="muted">
+          Over 1,200 flight hours worldwide & 100 combat hours, including relief
+          missions for the 2017 hurricane season, Operation Inherent Resolve,
+          and several large scale exercises.
+        </p>
+        <p class="muted">
+          <ul class="muted">
+            <li>
+              Inspect, operate, and repair critical aircraft systems during all
+              phases of operation from preflight inspection to final shutdown of
+              the day.
+            </li>
+            <li>
+              React to malfunctions and emergencies to ensure safety of flight.
+              Advise crew on appropriate corrective action, as well as aircraft
+              status and limitations.
+            </li>
+          </ul>
+        </p>
+        <p class="muted">
+          Awarded 165th Airlift Squadron Safety Non-Commissioned Officer of the
+          year, 2016
+        </p>
+      </dd>
+
+      <dt>
+        <h4>C-130 Aero-Repair Crew Chief, 2009-2012</h4>
+        <p>
+          123rd Maintenance Squadron, Kentucky Air National Guard
+        </p>
+      </dt>
+      <dd>
+        <p>
+          Inspect, repair, adjust, and maintain critical components of the C-130
+          Hercules including Landing Gear, Flight Controls, Doors, and Control
+          Cables.
+        </p>
+      </dd>
+    </dl>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h4 class="keyline-bottom text-center">Project History</h4>
     <p class="muted center">
       Projects are listed in order of approximate significance. For more
-      details, see
-      <a href="robert-buchberger.com/projects">
-        robert-buchberger.com/projects
+      details, see: <br>
+      <a href="robert-buchberger.com/projects.html">
+        robert-buchberger.com/projects.html
       </a>
     </p>
 
     <dl class="stacked">
-      <dt>
-        <h4>
-          <a href="https://github.com/rbuchberger/pd-aux-training">
-            MonroeTnSheriff.org
-          </a>
-        </h4>
-      </dt>
-      <dd>
-        {% icon_list ruby rails bootstrap aws %}
-        <p>
-          This Rails application provides training, bulletin, document library,
-          and time tracking features to a volunteer component of a county
-          sheriff's office. It has been reliably tracking ~500 volunteer hours
-          per month since January 2018. I am the only maintainer.
-        </p>
-      </dd>
-
       <dt>
         <h4>
           <a href="https://github.com/rbuchberger/jekyll_picture_tag">
@@ -75,10 +133,28 @@
         </p>
         <p>
           I didn't write it originally, but I did rewrite it! I expanded its
-          feature set in line with modern standards, and greatly improved the
-          plugin's architecture to simplify future improvements. My rewrite went
-          live in November of 2018, and the original maintainer handed the
-          project over to me in June of 2019.
+          feature set to fit the modern web, and greatly improved the plugin's
+          architecture to simplify future improvements. My rewrite went live in
+          November of 2018, and the original maintainer handed the project over
+          to me in June of 2019. I've been adding features and improvements on a
+          regular basis ever since.
+        </p>
+      </dd>
+
+      <dt>
+        <h4>
+          <a href="https://github.com/rbuchberger/pd-aux-training">
+            MonroeTnSheriff.org
+          </a>
+        </h4>
+      </dt>
+      <dd>
+        {% icon_list ruby rails bootstrap aws %}
+        <p>
+          This Rails application provides training, bulletin, document library,
+          and time tracking features to a volunteer component of a county
+          sheriff's office. It has been reliably tracking ~500 volunteer hours
+          per month since January 2018. I am the only maintainer.
         </p>
       </dd>
 
@@ -115,116 +191,9 @@
           scratch, and first deployed it in December 2018.
         </p>
       </dd>
-
-      <div class="page-break"></div>
-
-      <dt>
-        <h4>
-          <a href="https://github.com/rbuchberger/lisec-tech.com">
-            LiSEC-tech.com
-          </a>
-        </h4>
-      </dt>
-      <dd>
-        {% icon_list jekyll css %}
-        <p>
-          I deployed this recruitment, blog, and project site for a university
-          research grant in February 2019. I used a static site generator and
-          customized a pre-made theme.
-        </p>
-      </dd>
-
-      <dt>
-        <h4>
-          <a href="https://github.com/coronavirusapi/crawl-and-parse">
-            Coronavirus API
-          </a>
-        </h4>
-      </dt>
-      <dd>
-        {% icon_list ruby %}
-        <p>
-          This is a project which aims to archive the coronavirus statistics
-          which US states are legally required to report, by crawling their
-          websites directly. I contributed several pull requests, including
-          significant refactoring of its overall architecture, improvement of
-          its Command Line Interface, and several individual state crawlers.
-        </p>
-      </dd>
-
-      <dt>
-        <h4>
-          <a href="https://github.com/rbuchberger/objective_elements">
-            Objective Elements
-          </a>
-        </h4>
-      </dt>
-      <dd>
-        {% icon_list ruby %}
-        <p>
-          This is a featherweight, dependency-less ruby gem which generates
-          HTML. As I was working with Jekyll Icon List and Jekyll Picture Tag, I
-          realized that string interpolation and concatenation are entirely
-          inadequate for programmatically building HTML, and wrote a few classes
-          to handle the task more easily without requiring Nokogiri.
-        </p>
-      </dd>
-
-      <dt>
-        <h4>
-          <a href="https://github.com/rbuchberger/jekyll_icon_list">
-            Jekyll Icon List
-          </a>
-        </h4>
-      </dt>
-      <dd>
-        {% icon_list ruby jekyll %}
-        <p>
-          This is a small Jekyll plugin, written in Ruby, which builds lists of
-          icons & labels (like the one above this paragraph!) It saves a lot of
-          time writing and updating markup.
-        </p>
-      </dd>
-
-      <dt>
-        <h4>C-130 Flight Engineer, 2012-2019</h4>
-        <p class="subtitle">
-          165th Airlift Squadron, Kentucky Air National Guard
-        </p>
-      </dt>
-      <dd>
-        <p class="muted">
-          Over 1,200 flight hours worldwide, including relief missions for the
-          2017 hurricane season, Operation Inherent Resolve, and several large
-          scale exercises.
-        </p>
-        <p class="muted">
-          Inspect, operate, and repair critical aircraft systems during all
-          phases of operation from the preflight inspection to final shutdown of
-          the day. React to malfunctions and emergencies to ensure safety of
-          flight.
-        </p>
-        <p class="muted">
-          Awarded 165th Airlift Squadron Safety Non-Commissioned Officer of the
-          year, 2016
-        </p>
-      </dd>
-
-      <dt>
-        <h4>C-130 Aero-Repair Crew Chief, 2009-2012</h4>
-        <p>
-          123rd Maintenance Squadron, Kentucky Air National Guard
-        </p>
-      </dt>
-      <dd>
-        <p>
-          Inspected, repaired, adjusted, and maintained critical components of
-          the C-130 including Landing Gear, Flight Controls, Doors, and Control
-          Cables.
-        </p>
-      </dd>
     </dl>
   </section>
+
   <section class="two-columns">
     <section class="column">
       <h4 class="text-center keyline-bottom">Formal Education</h4>
@@ -233,7 +202,7 @@
           <h4>University of Louisville</h4>
         </dt>
         <dd>
-          <p>Bachelor of Science in Applied Physics, 2015</p>
+          <p>3 years of study in Bioengineering & Physics</p>
         </dd>
       </dl>
     </section>

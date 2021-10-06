@@ -77,3 +77,9 @@ vuetify:
 react:
   icon: react.svg
   label: React
+typescript:
+  icon: typescript.svg
+  label: TypeScript
+tailwind:
+  icon: tailwind.svg
+  label: Tailwind CSS
