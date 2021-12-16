@@ -65,7 +65,7 @@ sql:
 express:
   icon: expressjs.svg
   label: express.js
-node: 
+node:
   icon: Nodejs.svg
   label: Node.js
 vue:
@@ -83,3 +83,6 @@ typescript:
 tailwind:
   icon: tailwind.svg
   label: Tailwind CSS
+docker:
+  icon: docker.svg
+  label: Docker
